@@ -18,26 +18,6 @@ a {
     max-width: 1200px;
 }
 
-.container2 {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-#left {
-    border-right: 3px solid #989898;
-    padding-top: 25px;
-    padding-left: 8px;
-    padding-right: 4px;
-}
-
-#right {
-    padding-top: 25px;
-    padding-left: 8px;
-    padding-right: 4px;
-}
-
-
 /* ____________________________________________header */
 .header {
     border-bottom: .1px solid rgb(168, 168, 168);
@@ -64,14 +44,86 @@ a {
 
 .intro {
     background-color: bisque;
-    padding: 100px 0 0 0;
+    padding: 100px 0 100px 0;
 }
-
-.intro2 {
-    background-color: #C4E4FF;
-    padding: 100px 0 0 0;
+.intro__inner {
+    text-align: center;
 }
-
-.intro_title {
+.intro__title {
     font-size: 50px;
+}
+
+/* ____________________________________________opportunities */
+.oppor {
+    padding: 100px 0;
+}
+.oppor__items {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.oppor__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* ____________________________________________students */
+.students {
+    padding: 100px 0;
+    background-color: bisque;
+}
+.students__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+.students__img {
+    width: 100%;
+}
+
+
+
+/* ____________________________________________footer */
+.footer {
+    border-top: 1px solid #989898;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.social__item {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#left {
+    border-right: 3px solid #989898;
+    padding-top: 25px;
+    padding-left: 8px;
+    padding-right: 4px;
+}
+
+#right {
+    padding-top: 25px;
+    padding-left: 8px;
+    padding-right: 4px;
 }
