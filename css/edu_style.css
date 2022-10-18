@@ -11,84 +11,43 @@ a {
     color: #333;
 }
 
-/* ____________________________________________container */
 .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
 
-/* ____________________________________________header */
 .header {
     border-bottom: .1px solid rgb(168, 168, 168);
 }
+
 .header__logo {
     font-family: 'Lilita One', cursive;
     font-size: 50px;
 }
+
 .header__inner {
     margin: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .nav__items {
     display: flex;
     gap: 15px;
     text-transform: uppercase;
 }
+
 .nav__items li {
     list-style-type: none;
 }
-/* ____________________________________________header */
 
-.intro {
-    background-color: bisque;
-    padding: 100px 0 100px 0;
-}
-.intro__inner {
-    text-align: center;
-}
-.intro__title {
-    font-size: 50px;
-}
-
-/* ____________________________________________opportunities */
-.oppor {
-    padding: 100px 0;
-}
-.oppor__items {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.oppor__item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-/* ____________________________________________students */
-.students {
-    padding: 100px 0;
-    background-color: bisque;
-}
-.students__items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
-}
-.students__img {
-    width: 100%;
-}
-
-
-
-/* ____________________________________________footer */
 .footer {
     border-top: 1px solid #989898;
     background-color: #9999ff;
 }
+
 .footer__inner {
     display: flex;
     justify-content: space-between;
@@ -100,9 +59,6 @@ a {
     height: 45px;
 }
 
-
-
-/*_____________________________________________education */
 .container_education {
     margin: 0 auto;
     width: 100%;
@@ -111,7 +67,7 @@ a {
 
 .intro_education {
     background-color: bisque;
-    padding: 50px 0 50px 0;
+    padding: 25px 0 25px 0;
 }
 
 .education_inner {
