@@ -77,3 +77,12 @@ a {
     width: 100%;
     max-width: 1200px;
 }
+
+.intro__inner h2 {
+    padding-top: 1rem;
+    font-size: 30px;
+}
+
+.intro__inner p {
+    padding-top: 1rem;
+}
