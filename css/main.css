@@ -1,3 +1,9 @@
+:root {
+    --black: #333;
+    --white: rgb(197, 197, 197);
+}
+
+
 
 /* ____________________________________________container */
 .container {
@@ -28,11 +34,68 @@
 .nav__items li {
     list-style-type: none;
 }
+/* ____________________________________________header fixed position */
+.header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: bisque;
+}
+
+/* ____________________________________________menu aka responsive-nav */
+.menu {
+    display: none;
+}
+.menu__item {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #333;
+    font-size: 0px;
+
+    position: relative;
+}
+.menu__item::before,
+.menu__item::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+
+        position: absolute;
+        left: 0;
+    }
+.menu__item::before {
+        top: -8px;
+    }
+.menu__item::after {
+        top: 8px;
+    }
+
+
+@media (max-width: 675px) {
+    .nav__items {
+        display: grid;
+        
+    }
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+}
+
+
 /* ____________________________________________header */
 
 .intro {
     background-color: bisque;
-    padding: 100px 0 100px 0;
+    padding: 250px 0 150px 0;
 }
 .intro__inner {
     text-align: center;
@@ -40,22 +103,64 @@
 .intro__title {
     font-size: 50px;
 }
+/* ____________________________________________section title */
+.section__title {
+    font-size: 30px;
+}
 
-/* ____________________________________________opportunities */
-.oppor {
-    padding: 100px 0;
+/* ____________________________________________news */
+.news {
+    padding: 50px 0;
 }
-.oppor__items {
+.news__inner {
     display: grid;
-    gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
 }
-.oppor__item {
-    width: 100%;
+.news__secondary {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+.news__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.news__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+.news__img {
+    width: 100%;
+}
+
+/* ____________________________________________opportunities */
+.oppor {
+    padding: 50px 0 100px;
+}
+.oppor__inner {
+    margin: 0 auto;
+    display: grid;
+    gap: 50px;
+}
+.oppor__title {
+    font-size: 30px;
+    font-weight: 700;
+}
+.oppor__subtitle {
+    font-size: 20px;
+}
+.oppor__items {
+    display: flex;
+    justify-content: space-between;
+}
+.oppor__item {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 /* ____________________________________________students */
 .students {
     padding: 100px 0;
@@ -70,12 +175,10 @@
     width: 100%;
 }
 
-
-
 /* ____________________________________________footer */
 .footer {
-    border-top: 1px solid #989898;
-    background-color: #9999ff;
+    background-color: var(--black);
+    color: var(--white);
 }
 .footer__inner {
     display: flex;
@@ -90,24 +193,24 @@
 
 
 
+
+
+
 /*_____________________________________________education */
-.container_education {
+/* .container_education {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
-
 .intro_education {
     background-color: bisque;
     padding: 50px 0 50px 0;
 }
-
 .education_inner {
     text-align: center;
     display: flex;
     justify-content: center;
 }
-
 .education_image {
     width: 325px; 
     height: 265px;
@@ -116,44 +219,36 @@
     margin: 10px;
     display: block;
 }
-
 .edu-item {
     margin-right: 20px;
 }
-
 .edu-item h3 {
     margin: 0;
     text-transform: uppercase;
   }
-
 .edu-item p {
     margin: 6px 0;
     font-size: 1vw;
 }
-
 #left {
     border-right: 3px solid #989898;
     padding-top: 25px;
     padding-left: 8px;
     padding-right: 4px;
 }
-
 #right {
     padding-top: 25px;
     padding-left: 8px;
     padding-right: 4px;
 }
-
 .education_title {
     font-size: 50px;
 }
-
 .container_education2 {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
-
 .intro_education2 {
     padding: 50px 10px 50px 10px;
-}
+} */
