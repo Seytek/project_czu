@@ -1,8 +1,9 @@
 :root {
-    --black: #333;
-    --white: rgb(197, 197, 197);
+    --black: rgb(19, 19, 19);
+    --white: rgb(255, 255, 255);
+    --background: #FAA6FF;
+    --darkback: #7353BA;
 }
-
 
 
 /* ____________________________________________container */
@@ -21,7 +22,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: greenyellow;
+    background-color: var(--background);
 }
 .header__logo {
     font-family: 'Lilita One', cursive;
@@ -38,7 +39,7 @@
     top: 100%;
     left: 0;
     text-align: right;
-    background-color: greenyellow;
+    background-color: var(--background);
     width: 100%;
 }
 .nav__items {
@@ -140,8 +141,9 @@
 /* ____________________________________________header */
 
 .intro {
-    background-color: bisque;
     padding: 250px 0 150px 0;
+    background-color: var(--white);
+
 }
 .intro__inner {
     text-align: center;
@@ -157,6 +159,8 @@
 /* ____________________________________________news */
 .news {
     padding: 50px 0;
+    background-color: var(--white);
+
 }
 .news__inner {
     display: grid;
@@ -183,6 +187,8 @@
 /* ____________________________________________opportunities */
 .oppor {
     padding: 50px 0 100px;
+    background-color: var(--white);
+
 }
 .oppor__inner {
     margin: 0 auto;
@@ -210,7 +216,8 @@
 /* ____________________________________________students */
 .students {
     padding: 100px 0;
-    background-color: bisque;
+    background-color: var(--white);
+
 }
 .students__items {
     display: grid;
