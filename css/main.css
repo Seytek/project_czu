@@ -1,19 +1,24 @@
 :root {
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
-    --background: #FAA6FF;
+    --gray: rgb(104, 104, 104);
+    --background: #0FFF95;
     --darkback: #7353BA;
 }
 
-
-/* ____________________________________________container */
+/* ____________________________________________ Container */
 .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
+@media (max-width: 780px) {
+    .container {
+        padding: 0 30px;
+    }
+} 
 
-/* ____________________________________________header */
+/* ____________________________________________ Header */
 .header {
     border-bottom: .1px solid rgb(168, 168, 168);
     position: fixed;
@@ -50,6 +55,7 @@
     margin-bottom: 30px;
 }
 .nav__item {
+    display: inline-block;
     transition: .3s linear;
 }
 .nav__item::after {
@@ -65,7 +71,8 @@
 .nav__item:hover::after {
     width: 100%;
 }
-/* ____________________________________________Menu/Burger */
+
+/* ____________________________________________ Menu/Burger */
 .nav__burger {
     background-color: var(--black);
     display: block;
@@ -88,7 +95,6 @@
 .nav__burger::before {
     top: -5px;
 }
-
 .nav__toggle__label {
     position: absolute;
     top: 0;
@@ -99,7 +105,6 @@
     align-items: center;
     margin-right: 30px;
 }
-
 
 #nav__toggle {
     display: none;
@@ -119,7 +124,6 @@
     top: 0;
 }
 
-
 @media (min-width: 780px) {
     .nav__toggle__label {
         display: none;
@@ -137,44 +141,81 @@
     }
 }
 
-
-/* ____________________________________________header */
-
+/* ____________________________________________ Introduction */
 .intro {
     padding: 250px 0 150px 0;
-    background-color: var(--white);
-
 }
 .intro__inner {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 .intro__title {
     font-size: 50px;
+    padding-bottom: 20px;
 }
-/* ____________________________________________section title */
+.intro__text {
+    font-size: 22px;
+}
+.btn {
+    background-color: var(--background);
+    border: 0px;
+    padding: 15px 0;
+    width: calc(100%/4);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+@media (max-width: 780px) {
+    .btn {
+        width: calc(100%/2);
+    }
+}
+/* ____________________________________________ Section title */
+.section__info {
+    display: grid;
+    gap: 5px;
+}
 .section__title {
     font-size: 30px;
 }
+.section__subtitle {
+    font-size: 20px;
+}
 
-/* ____________________________________________news */
+/* ____________________________________________ Section title */
+.img {
+    border-radius: 4px;
+}
+
+/* ____________________________________________ News */
 .news {
     padding: 50px 0;
-    background-color: var(--white);
-
 }
 .news__inner {
     display: grid;
     gap: 30px;
+}
+.news__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.news__main {
+    padding: 10px;
+    box-shadow: 10px 10px #0FFF95;
 }
 .news__secondary {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.news__items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+.news__item {
+    padding: 10px;
+    border: 0.1px solid rgb(228, 228, 228);
+    box-shadow: 5px 5px #0FFF95;
 }
 .news__title {
     font-weight: 700;
@@ -184,11 +225,17 @@
     width: 100%;
 }
 
-/* ____________________________________________opportunities */
+@media (max-width: 780px) {
+    .news__items {
+        grid-template-columns: 1fr;
+    }
+    .news__item .news__title {
+        font-size: 16px;
+    }
+}
+/* ____________________________________________ Opportunities */
 .oppor {
-    padding: 50px 0 100px;
-    background-color: var(--white);
-
+    padding: 50px 0;
 }
 .oppor__inner {
     margin: 0 auto;
@@ -196,52 +243,111 @@
     gap: 50px;
 }
 .oppor__title {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 700;
 }
-.oppor__subtitle {
-    font-size: 20px;
-}
 .oppor__items {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
 }
 .oppor__item {
-    width: 23%;
+    padding: 0 8px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+    width: calc(100%/4);
+}
+.oppor__img {
+    box-shadow: 5px 5px var(--background);
+    margin-bottom: 12px;
 }
 
-/* ____________________________________________students */
-.students {
-    padding: 100px 0;
-    background-color: var(--white);
+.oppor__more a {
+    color: #27c200;
+    cursor: pointer;
 
+    transition: .5s linear;
 }
-.students__items {
+.oppor__more a:hover {
+    color: var(--black);
+}
+
+
+@media (max-width: 780px) {
+    .oppor__items {
+        
+    }
+    .oppor__inner {
+        gap: 30px;
+    }
+}
+
+/* ____________________________________________ Stats */
+.stats__inner {
+    padding: 50px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 50px;
 }
-.students__img {
-    width: 100%;
+.stats__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.stats__item {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+.stats__title {
+    font-size: 28px;
+}
+.stats__info {
+    font-size: 25px;
+}
+.stats__img {
+    width: 80px;
+    height: 80px;
+}
+@media (max-width: 780px) {
+    .stats__items {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stats__inner {
+        gap: 30px;
+    }
 }
 
-/* ____________________________________________footer */
+/* ____________________________________________ Students */
+.students {
+    padding: 50px 0;
+}
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+
+.students__items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+/* ____________________________________________ Footer */
 .footer {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--background);
 }
 .footer__inner {
     display: flex;
     justify-content: space-between;
     padding: 50px 0;
 }
-
 .social__item {
     width: 45px;
     height: 45px;
 }
-
-
