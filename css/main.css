@@ -162,12 +162,18 @@
 }
 .btn {
     background-color: var(--background);
-    border: 0px;
+    border: 1px solid var(--background);
     padding: 15px 0;
     width: calc(100%/4);
     font-size: 20px;
     font-weight: 700;
     border-radius: 10px;
+
+    transition: all .5s linear;
+}
+.btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--black);
 }
 @media (max-width: 780px) {
     .btn {
@@ -192,10 +198,8 @@
 }
 
 /* ____________________________________________ News */
-.news {
-    padding: 50px 0;
-}
 .news__inner {
+    margin: 25px 0 50px;
     display: grid;
     gap: 30px;
 }
@@ -222,6 +226,9 @@
     font-weight: 700;
     font-size: 18px;
 }
+.news__title:hover {
+    text-decoration-line: underline;
+}
 .news__img {
     width: 100%;
 }
@@ -235,11 +242,8 @@
     }
 }
 /* ____________________________________________ Opportunities */
-.oppor {
-    padding: 50px 0;
-}
 .oppor__inner {
-    margin: 0 auto;
+    margin: 50px auto;
     display: grid;
     gap: 50px;
 }
@@ -274,7 +278,6 @@
     color: var(--black);
 }
 
-
 @media (max-width: 780px) {
     .oppor__items {
         
@@ -287,9 +290,10 @@
 /* ____________________________________________ Stats */
 .stats {
     background-color: var(--oppositeback);
+    padding: 50px 0;
 }
 .stats__inner {
-    padding: 40px 0;
+    margin-top: 30px;
     display: grid;
     gap: 50px;
 }
@@ -325,23 +329,18 @@
 
 /* ____________________________________________ Students */
 .students {
-    padding: 50px 0;
+    padding-top: 50px;
 }
-.a { grid-area: a; }
-.b { grid-area: b; }
-.c { grid-area: c; }
-.d { grid-area: d; }
-.e { grid-area: e; }
-.f { grid-area: f; }
-
 .students__items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px
+    margin: 50px 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
 }
 .students__item {
+    border-radius: 5px;
     position: relative;
-    width: 25%;
+    width: 100%;
     height: 250px;
     overflow: hidden; /* hide everything out of block */
 }
@@ -355,7 +354,6 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    
 }
 .students__content {
     width: 100%;
@@ -363,16 +361,17 @@
 
     z-index: 2;
     position: absolute;
-    background-color: rgb(59, 59, 59, 0.6);
+    background-color: rgb(240, 0, 106, 0.9);
     color: white;
     top: 0;
     left: 0;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     opacity: 0;
     transition: opacity .4s linear;
 }
@@ -384,9 +383,38 @@
 }
 
 
+.grid__span--big { 
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+}
+.grid__span--average { 
+    grid-column: span 2;
+}
+.grid__span--big .students__img {
+    width: 700px;
+    height: 520px;
+}
+.grid__span--average .students__img {
+    width: 600px;
+    height: 420px;
+}
+
+@media (max-width: 780px) {
+    .students__items {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .grid__span--average .students__img {
+        width: 800px;
+        height: 600px;
+    }
+}
+
 /* ____________________________________________ Footer */
 .footer {
-    background-color: var(--background);
+    background-color: #333;
+    color: rgb(219, 219, 219);
 }
 .footer__inner {
     display: flex;
