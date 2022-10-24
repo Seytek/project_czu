@@ -3,6 +3,7 @@
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
     --background: #0FFF95;
+    --oppositeback: #f0006a;
     --darkback: #7353BA;
 }
 
@@ -284,8 +285,11 @@
 }
 
 /* ____________________________________________ Stats */
+.stats {
+    background-color: var(--oppositeback);
+}
 .stats__inner {
-    padding: 50px 0;
+    padding: 40px 0;
     display: grid;
     gap: 50px;
 }
@@ -331,10 +335,52 @@
 .f { grid-area: f; }
 
 .students__items {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px
+}
+.students__item {
+    position: relative;
+    width: 25%;
+    height: 250px;
+    overflow: hidden; /* hide everything out of block */
+}
+.students__img {
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 250px;
 
+    /*centering the image in block */
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    
+}
+.students__content {
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(59, 59, 59, 0.6);
+    color: white;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity .4s linear;
+}
+.students__content:hover {
+    opacity: 1;
+}
+.students__title {
+    font-size: 22px;
 }
 
 
