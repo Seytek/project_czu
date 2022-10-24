@@ -5,6 +5,7 @@
     --background: #0FFF95;
     --oppositeback: #f0006a;
     --darkback: #7353BA;
+    --footerwhite: rgb(228, 228, 228);
 }
 
 /* ____________________________________________ Container */
@@ -414,14 +415,27 @@
 /* ____________________________________________ Footer */
 .footer {
     background-color: #333;
-    color: rgb(219, 219, 219);
+    color: var(--footerwhite);
 }
 .footer__inner {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 30px 0;
+}
+.footer__block {
+    display: grid;
+    gap: 5px;
+}
+.footer__link{
+    color: var(--footerwhite);
+}
+.footer__link:hover {
+    color: #0FFF95;
+}
+.social {
+    margin-top: 5px;
 }
 .social__item {
-    width: 45px;
-    height: 45px;
+    width: 25px;
+    height: 25px;
 }
