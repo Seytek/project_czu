@@ -1,79 +1,178 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+:root {
+    --black: rgb(19, 19, 19);
+    --white: rgb(255, 255, 255);
+    --gray: rgb(104, 104, 104);
+    --background: #0FFF95;
+    --oppositeback: #f0006a;
+    --darkback: #7353BA;
+    --footerwhite: rgb(228, 228, 228);
+}
+/* We need it in order to attach the .footer to the end of the page */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
+/* ____________________________________________ Container */
 .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
-
+@media (max-width: 780px) {
+    .container {
+        padding: 0 30px;
+    }
+} 
+/* ____________________________________________ Header */
 .header {
     border-bottom: .1px solid rgb(168, 168, 168);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--background);
 }
-
 .header__logo {
     font-family: 'Lilita One', cursive;
     font-size: 50px;
 }
-
 .header__inner {
-    margin: 20px 0;
-    display: flex;
+    margin: 12px 0;
     align-items: center;
     justify-content: space-between;
 }
-
+.nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: right;
+    background-color: var(--background);
+    width: 100%;
+}
 .nav__items {
-    display: flex;
-    gap: 15px;
     text-transform: uppercase;
+    display: grid;
+    gap: 10px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.nav__item {
+    display: inline-block;
+    transition: .3s linear;
+}
+.nav__item::after {
+    content: "";
+    display: block;
+    margin-top: 3px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--black);
+
+    transition: .3s linear;
+}
+.nav__item:hover::after {
+    width: 100%;
 }
 
-.nav__items li {
-    list-style-type: none;
+/* ____________________________________________ Menu/Burger */
+.nav__burger {
+    background-color: var(--black);
+    display: block;
+    height: 3px;
+    width: 25px;
+    position: relative;
+}
+.nav__burger::after,
+.nav__burger::before {
+    content: "";
+    background-color: var(--black);
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.nav__burger::after {
+    top: 5px;
+}
+.nav__burger::before {
+    top: -5px;
+}
+.nav-toggle__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+    border: 1px black;
+    align-items: center;
+    margin-right: 30px;
 }
 
+#nav-toggle {
+    display: none;
+}
+#nav-toggle:checked ~ .nav {
+    display: block;
+}
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger { /*we are hiding the main line of burger */
+    background: transparent;
+}
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media (min-width: 780px) {
+    .nav-toggle__label {
+        display: none;
+    }
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav {
+        all: unset; /* delete previous css styles on .nav */
+    }
+    .nav__items {
+        display: flex;
+        margin: auto 0;
+    }
+}
+
+/* ____________________________________________ Footer */
 .footer {
-    border-top: 1px solid #989898;
-    background-color: #9999ff;
+    background-color: #333;
+    color: var(--footerwhite);
+    margin-top: auto;
 }
-
 .footer__inner {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 30px 0;
 }
-
+.footer__block {
+    display: grid;
+    gap: 5px;
+}
+.footer__link{
+    color: var(--footerwhite);
+}
+.footer__link:hover {
+    color: #0FFF95;
+}
+.social {
+    margin-top: 5px;
+}
 .social__item {
-    width: 45px;
-    height: 45px;
-}
-
-.intro {
-    background-color: bisque;
-    padding: 100px 0 100px 0;
-}
-
-.intro__inner {
-    text-align: center;
-}
-
-.intro__title {
-    font-size: 50px;
-}
-
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
+    width: 25px;
+    height: 25px;
 }

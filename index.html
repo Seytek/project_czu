@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Magnum University of Technology</title>
 </head>
 <body>
@@ -16,18 +16,29 @@
         <div class="container">
             <div class="header__inner">
                 <a class="header__logo" href="index.html">MUT</a>
-                <input type="checkbox" id="nav-toggle"> <!-- use id because of label -->
-                <nav class="nav">
-                    <ul class="nav__items">
-                        <li><a href="education.html" class="nav__item">Education</a></li>
-                        <li><a href="faculties.html" class="nav__item">Faculties</a></li>
-                        <li><a href="campus.html" class="nav__item">Campus</a></li>
-                        <li><a href="news.html" class="nav__item">News</a></li>
-                        <li><a href="about.html" class="nav__item">About</a></li>
-                        <li><a href="#" class="nav__item">Search</a></li>
-                    </ul>
-                </nav>
-                <label for="nav-toggle" class="nav-toggle__label"><span class="nav__burger"></span></label>
+                <div class="header__nav">
+                    <input type="checkbox" id="nav-toggle"> <!-- use id because of label -->
+                    <nav class="nav">
+                        <ul class="nav__items">
+                            <li><a href="education.html" class="nav__item">Education</a></li>
+                            <li><a href="faculties.html" class="nav__item">Faculties</a></li>
+                            <li><a href="campus.html" class="nav__item">Campus</a></li>
+                            <li><a href="news.html" class="nav__item">News</a></li>
+                            <li><a href="about.html" class="nav__item">About</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="search-btn">
+                        <input type="checkbox" id="search-btn__toggle">
+                        <label for="search-btn__toggle" class="search-btn__label"><img class="search-btn__img" src="images/search.svg" alt="#"></label>
+                        <div class="search-block">
+                            <input placeholder="What are you looking for" type="text" class="search-block__field">
+                            <a href="#" class="search-block__btn">Find it</a>
+                        </div>
+                    </div>
+                    
+                    <label for="nav-toggle" class="nav-toggle__label"><span class="nav__burger"></span></label>
+                </div>
             </div>
         </div>
     </header>
