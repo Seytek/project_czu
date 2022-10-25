@@ -97,7 +97,7 @@
 .nav__burger::before {
     top: -5px;
 }
-.nav__toggle__label {
+.nav-toggle__label {
     position: absolute;
     top: 0;
     right: 0;
@@ -108,26 +108,26 @@
     margin-right: 30px;
 }
 
-#nav__toggle {
+#nav-toggle {
     display: none;
 }
-#nav__toggle:checked ~ .nav {
+#nav-toggle:checked ~ .nav {
     display: block;
 }
-#nav__toggle:checked ~ .nav__toggle__label .nav__burger { /*we are hiding the main line of burger */
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger { /*we are hiding the main line of burger */
     background: transparent;
 }
-#nav__toggle:checked ~ .nav__toggle__label .nav__burger::before {
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger::before {
     transform: rotate(-45deg);
     top: 0;
 }
-#nav__toggle:checked ~ .nav__toggle__label .nav__burger::after {
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger::after {
     transform: rotate(45deg);
     top: 0;
 }
 
 @media (min-width: 780px) {
-    .nav__toggle__label {
+    .nav-toggle__label {
         display: none;
     }
     .header__inner {
@@ -384,19 +384,19 @@
 }
 
 
-.grid__span--big { 
+.grid__span_big { 
     grid-column: span 2;
     grid-row: span 2;
     height: 100%;
 }
-.grid__span--average { 
+.grid__span_average { 
     grid-column: span 2;
 }
-.grid__span--big .students__img {
+.grid__span_big .students__img {
     width: 700px;
     height: 520px;
 }
-.grid__span--average .students__img {
+.grid__span_average .students__img {
     width: 600px;
     height: 420px;
 }
@@ -406,7 +406,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    .grid__span--average .students__img {
+    .grid__span_average .students__img {
         width: 800px;
         height: 600px;
     }
