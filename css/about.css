@@ -4,14 +4,7 @@
     --gray: rgb(104, 104, 104);
     --background: #0FFF95;
     --oppositeback: #f0006a;
-    --darkback: #7353BA;
     --footerwhite: rgb(228, 228, 228);
-}
-/* We need it in order to attach the .footer to the end of the page */
-.page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* ____________________________________________ Container */
@@ -20,14 +13,25 @@
     width: 100%;
     max-width: 1200px;
 }
-@media (max-width: 780px) {
+@media (max-width: 1300px) {
+    .container {
+        max-width: 991px;
+    }
+}
+@media (max-width: 1100px) {
+    .container {
+        max-width: 900px;
+    }
+}
+@media (max-width: 910px) {
     .container {
         padding: 0 30px;
     }
-} 
+}
+
+
 /* ____________________________________________ Header */
 .header {
-    border-bottom: .1px solid rgb(168, 168, 168);
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,6 +47,7 @@
 .header__inner {
     margin: 12px 0;
     align-items: center;
+    display: flex;
     justify-content: space-between;
 }
 .nav {
@@ -78,6 +83,64 @@
 .nav__item:hover::after {
     width: 100%;
 }
+.header__nav {
+    width: auto;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    gap: 50px;
+}
+
+/* ____________________________________________ Search button */
+.search-btn__img {
+    width: 20px;
+}
+.search-block {
+    display: none;
+    position: absolute;
+    top: 100%; /* it will be after our .header block */
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: var(--background);
+    border-top: 1px solid #0ebe72;
+    z-index: 999;
+}
+.search-block__field {
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--white);
+}
+.search-block__btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--oppositeback);
+    border: 1px solid var(--background);
+
+    transition: all 0.3s linear;
+}
+.search-block__btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--background);
+}
+
+#search-btn__toggle {
+    display: none;
+}
+#search-btn__toggle:checked ~ .search-block {
+    display: block;
+}
+@media (max-width: 780px) {
+    .search-block {
+        height: 100vh;
+    }
+    .search-block__btn {
+        margin-top: 10px;
+        display: inline-block;
+    }
+}
+
 
 /* ____________________________________________ Menu/Burger */
 .nav__burger {
@@ -176,3 +239,55 @@
     width: 25px;
     height: 25px;
 }
+
+/* ____________________________________________ Section title */
+.section__info {
+    display: grid;
+    gap: 5px;
+}
+.section__title {
+    font-size: 30px;
+}
+.section__title_about {
+    width: 70%;
+}
+.section__subtitle {
+    font-size: 20px;
+}
+@media (max-width: 780px) {
+    .section__title {
+        font-size: 26px;
+    }
+    .section__subtitle {
+        font-size: 20px;
+    }
+}
+
+/* We need it in order to attach the .footer to the end of the page */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ____________________________________________ About */
+.about {
+    margin: 150px 0 50px;
+}
+.about__inner {
+    margin: 30px 0;
+}
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.about__text {
+    line-height: 1.8;
+}
+
+
+/* ____________________________________________ Facts */
+
+
+

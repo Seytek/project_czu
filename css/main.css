@@ -4,7 +4,6 @@
     --gray: rgb(104, 104, 104);
     --background: #0FFF95;
     --oppositeback: #f0006a;
-    --darkback: #7353BA;
     --footerwhite: rgb(228, 228, 228);
 }
 
@@ -250,6 +249,8 @@
         width: calc(100%/2);
     }
 }
+
+
 /* ____________________________________________ Section title */
 .section__info {
     display: grid;
@@ -495,7 +496,7 @@
     font-size: 22px;
 }
 
-
+/* ____________________________________________ Grid for images */
 .grid__span_big { 
     grid-column: span 2;
     grid-row: span 2;
