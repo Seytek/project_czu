@@ -236,6 +236,54 @@
         width: calc(100%/2);
     }
 }
+/* ____________________________________________ Points */
+.points__inner {
+    margin: 50px auto;
+}
+.points__title {
+    font-size: 22px;
+    font-weight: 700;
+}
+.points__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.points__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.points__img {
+    box-shadow: 5px 5px var(--background);
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+@media (max-width: 910px) {
+    .points__items {
+        grid-template-columns: 1fr 1fr;
+    }
+    .points__item {
+        gap: 6px;
+    }
+}
+@media (max-width: 780px) {
+    .points__inner {
+        margin: 30px auto;
+    }
+}
+@media (max-width: 580px) {
+    .points__items {
+        grid-template-columns: 1fr;
+    }
+    .points__item {
+        gap: 4px;
+    }
+}
+
 
 /* ____________________________________________ Footer */
 .footer {
