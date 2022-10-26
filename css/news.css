@@ -214,7 +214,7 @@
 
 /* ____________________________________________ Introduction */
 .intro {
-    padding: 150px 0 50px 0;
+    padding: 150px 0 0 0;
 }
 .intro__inner {
     text-align: center;
@@ -237,6 +237,19 @@
     }
 }
 
+/* ____________________________________________ News */
+/*the goal is to make it look lees cramped. maybe add some pictures or
+smth*/
+.news__event {
+    margin: 50px 0px 50px 0px;
+}
+
+ul{
+    
+    padding-top: 5px;
+    
+    padding-bottom: 5px;
+}
 
 /* ____________________________________________ Section title */
 .section__info {
