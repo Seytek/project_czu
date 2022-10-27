@@ -251,6 +251,9 @@
 .section__title_about {
     width: 70%;
 }
+.underline {
+    border-bottom: 2px solid var(--black);
+}
 .section__subtitle {
     font-size: 20px;
 }
@@ -285,9 +288,44 @@
 .about__text {
     line-height: 1.8;
 }
+.about__img {
+    border-radius: 5px;
+}
 
 
 /* ____________________________________________ Facts */
+.facts {
+    border-top: 1px solid var(--footerwhite);
+    padding: 35px 0 50px;
+}
+.facts__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.facts__subtitle {
+    font-weight: 700;
+    margin: 15px 0;
+}
+.facts__item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
 
 
+.facts__images {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+}
+.image__item {
+    width: 350px;
+}
+.image {
+    border-radius: 5px;
+}
+.image__title {
+    width: 100%;
+}
 
