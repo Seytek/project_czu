@@ -7,7 +7,6 @@
     --footerwhite: rgb(228, 228, 228);
 }
 
-
 /* ____________________________________________ Container */
 .container {
     margin: 0 auto;
@@ -29,7 +28,6 @@
         padding: 0 30px;
     }
 }
-
 
 /* ____________________________________________ Header */
 .header {
@@ -142,7 +140,6 @@
     }
 }
 
-
 /* ____________________________________________ Menu/Burger */
 .nav__burger {
     background-color: var(--black);
@@ -212,40 +209,65 @@
     }
 }
 
-/* ____________________________________________ Introduction */
-.intro {
-    padding: 150px 0 0 0;
+/* ____________________________________________ Section title */
+.section__info {
+    display: grid;
+    gap: 5px;
 }
-.intro__inner {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+.section__title {
+    font-size: 30px;
 }
-.intro__title {
-    font-size: 50px;
-    padding-bottom: 20px;
+.section__subtitle {
+    font-size: 20px;
 }
-.intro__text {
-    font-size: 22px;
-}
-
 @media (max-width: 780px) {
-    .btn {
-        width: calc(100%/2);
+    .section__title {
+        font-size: 26px;
+    }
+    .section__subtitle {
+        font-size: 20px;
     }
 }
+.section__title_campus {
+    text-align: center;
+    padding: 0 0 15px;
+}
+
+/* ____________________________________________ Introduction */
+.intro {
+    padding: 100px 0 0 0;
+}
+.intro__images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.image__item {
+    width: 100%;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+}
+.image {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
 /* ____________________________________________ Points */
 .points__inner {
-    margin: 50px auto;
+    margin: 50px 0;
 }
 .points__title {
     font-size: 22px;
     font-weight: 700;
 }
 .points__items {
-    width: 100%;
+    padding-top: 15px;
+    width: 100%;    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -314,98 +336,4 @@
 }
 
 
-/* * {
-    margin: 0;
-    padding: 0;
-    list-style: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-.container_campus {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.container_campus h2 {
-    font-size: 25px;
-}
-
-.header {
-    border-bottom: .1px solid rgb(168, 168, 168);
-}
-
-.header__logo {
-    font-family: 'Lilita One', cursive;
-    font-size: 50px;
-}
-
-.header__inner {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav__items {
-    display: flex;
-    gap: 15px;
-    text-transform: uppercase;
-}
-
-.nav__items li {
-    list-style-type: none;
-}
-
-.footer {
-    border-top: 1px solid #989898;
-    background-color: #9999ff;
-}
-
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 0;
-}
-
-.social__item {
-    width: 45px;
-    height: 45px;
-}
-
-.intro_campus {
-    background-color: bisque;
-    padding: 50px 0 150px 0;
-}
-
-.campus_inner {
-    text-align: center;
-}
-
-.campus_title {
-    font-size: 50px;
-}
-
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-#campus_img {
-    width: 350px;
-    float: left;
-    padding: 10px
-}
-
-#campus_text {
-    margin-left: 150px;
-    text-align: center;
-}
-*/
+/* I guess I'll delete commented part, if necessary, we will take if from the github later */
