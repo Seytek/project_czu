@@ -268,6 +268,17 @@
     }
 }
 
+/* We need it in order to attach the .footer to the end of the page */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
+
 
 /* ____________________________________________ Section title */
 .dev__comment {
@@ -280,139 +291,3 @@
 
 
 
-/* ------------------- We don't need it now ------------------------*/
-/* We need it in order to attach the .footer to the end of the page */
-/* .page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
-
-/* 
-* {
-    margin: 0;
-    padding: 0;
-    list-style: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.header {
-    border-bottom: .1px solid rgb(168, 168, 168);
-}
-
-.header__logo {
-    font-family: 'Lilita One', cursive;
-    font-size: 50px;
-}
-
-.header__inner {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav__items {
-    display: flex;
-    gap: 15px;
-    text-transform: uppercase;
-}
-
-.nav__items li {
-    list-style-type: none;
-}
-
-.footer {
-    border-top: 1px solid #989898;
-    background-color: #9999ff;
-}
-
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 0;
-}
-
-.social__item {
-    width: 45px;
-    height: 45px;
-}
-
-.container_education {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.intro_education {
-    background-color: bisque;
-    padding: 25px 0 25px 0;
-}
-
-.education_inner {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-.education_image {
-    width: 325px; 
-    height: 265px;
-    padding-top: 10px;
-    left: 25px;
-    margin: 10px;
-    display: block;
-}
-
-.edu-item {
-    margin-right: 20px;
-}
-
-.edu-item h3 {
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-.edu-item p {
-    margin: 6px 0;
-    font-size: 1vw;
-}
-
-#left {
-    border-right: 3px solid #989898;
-    padding-top: 25px;
-    padding-left: 8px;
-    padding-right: 4px;
-}
-
-#right {
-    padding-top: 25px;
-    padding-left: 8px;
-    padding-right: 4px;
-}
-
-.education_title {
-    font-size: 50px;
-}
-
-.container_education2 {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.intro_education2 {
-    padding: 50px 10px 50px 10px;
-} */

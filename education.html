@@ -16,21 +16,65 @@
         <div class="container">
             <div class="header__inner">
                 <a class="header__logo" href="index.html">MUT</a>
-                <nav class="nav">
-                    <ul class="nav__items">
-                        <li><a href="education.html" class="nav__item">Education</a></li>
-                        <li><a href="faculties.html" class="nav__item">Faculties</a></li>
-                        <li><a href="campus.html" class="nav__item">Campus</a></li>
-                        <li><a href="news.html" class="nav__item">News</a></li>
-                        <li><a href="about.html" class="nav__item">About</a></li>
-                        <li><a href="#" class="nav__item">Search</a></li>
-                    </ul>
-                </nav>
+                <div class="header__nav">
+                    <input type="checkbox" id="nav-toggle"> <!-- use id because of label -->
+                    <nav class="nav">
+                        <ul class="nav__items">
+                            <li><a href="education.html" class="nav__item">Education</a></li>
+                            <li><a href="faculties.html" class="nav__item">Faculties</a></li>
+                            <li><a href="campus.html" class="nav__item">Campus</a></li>
+                            <li><a href="news.html" class="nav__item">News</a></li>
+                            <li><a href="about.html" class="nav__item">About</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-btn">
+                        <input type="checkbox" id="search-btn__toggle">
+                        <label for="search-btn__toggle" class="search-btn__label"><img class="search-btn__img" src="images/search.svg" alt="#"></label>
+                        <div class="search-block">
+                            <input placeholder="What are you looking for" type="text" class="search-block__field">
+                            <a href="#" class="search-block__btn">Find it</a>
+                        </div>
+                    </div>
+                    <label for="nav-toggle" class="nav-toggle__label"><span class="nav__burger"></span></label>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="intro_education">
+
+
+    <div class="container">
+        <div class="dev__comment">Development in progress</div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__block">
+                    <div>Lorem-ipsum 1844/12</div>
+                    <div>Paris 150 00, France, MU, LOREM</div>
+                    <div class="social">
+                        <img class="social__item" src="images/facebook.svg" alt="#">
+                        <img class="social__item" src="images/instagram.svg" alt="#">
+                        <img class="social__item" src="images/twitter.svg" alt="#">
+                        <img class="social__item" src="images/youtube.svg" alt="#">
+                    </div>
+                </div>
+                <div class="footer__block">
+                    <div>Made by Lorem Ipsum</div>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footer__link">Join us right now!</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- <section class="intro_education">
         <div class="container_education">
             <div class="education_title">
                 <h1>MUT Education</h1>
@@ -63,38 +107,6 @@
             <td id="right">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</td>
             </tr>
         </table>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__block">
-                    <div class="footer__title">Info</div>
-                    <div class="footer__text">
-                        <div>Lorem ipsum dolor sit</div>
-                        <div>Lorem ipsum dolor sit</div>
-                    </div>
-                </div>
-                <div class="footer__block">
-                    <div class="footer__title">Social networks</div>
-                    <div class="social">
-                        <img class="social__item" src="images/facebook.svg" alt="#"> 
-                        </img>
-                        <img class="social__item" src="images/instagram.svg" alt="#">
-                        </img>
-                        <img class="social__item" src="images/twitter.svg" alt="#">
-                        </img>
-                    </div>
-                </div>
-                <div class="footer__block">
-                    <div class="footer__title">Location</div>
-                    <div class="footer__text">
-                        <div>Lorem-ipsum 1844/12</div>
-                        <div>Paris 150 00</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </section> -->
 </body>
 </html>

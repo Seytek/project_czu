@@ -266,12 +266,6 @@
     }
 }
 
-/* We need it in order to attach the .footer to the end of the page */
-.page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
 /* ____________________________________________ About */
 .about {
@@ -329,3 +323,12 @@
     width: 100%;
 }
 
+
+
+/* ------------------- We don't need it now ------------------------*/
+/* We need it in order to attach the .footer to the end of the page */
+/* .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
