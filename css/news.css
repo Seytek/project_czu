@@ -3,6 +3,7 @@
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
     --background: #0FFF95;
+    --darkmaincolor: #0ebe72;
     --oppositeback: #f0006a;
     --footerwhite: rgb(228, 228, 228);
 }
@@ -348,26 +349,32 @@ ul{
 }
 
 /*___________________________________________ Switch*/
-.hidden__div {
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.switch {
+    display: none;
+}
+.switch__label {
+    background-color: var(--footerwhite);
+    padding: 10px;
+    cursor: pointer;
+    width: 25%;
+}
+.tab__item {
+    order: 1; /*didn't really get how to use orders correctly without flex-blox in .tabs */
     display: none;
 }
 
-.switch__1:checked ~ #news__1{
+.switch:checked + label + .tab__item { /* it means that after .switch must come immidiately label and than .tab__item */
     display: block;
 }
 
-.switch__2:checked ~ #news__2{
-    display: block;
-}
-
-.switch__3:checked ~ #news__3{
-    display: block;
-}
-
-.switch__4:checked ~ #news__4{
-    display: block;
-}
-
-input {
-    margin-top: 20px;
+.switch:checked + label { 
+    background-color: var(--white);
+    color: var(--darkmaincolor);
+    border-top: 3px solid var(--darkmaincolor);
 }
