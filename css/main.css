@@ -2,17 +2,15 @@
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
-    --backGround: #0FFF95;
-    --oppositeBack: #f0006a;
-    --footerWhite: rgb(228, 228, 228);
+    --background: #0FFF95;
+    --opposite-background: #f0006a;
+    --footer-white: rgb(228, 228, 228);
 
-    --logoFontSize: 50px;
-    --sectionFontSize: 25px;
-    --bigFontSize: 40px;
-    --bigtitleFontSize: 26px;
-    --titleFontSize: 22px;
-    --subFontSize: 18px;
-    --minFontSize: 16px;
+    --fontsize-50: 50px;
+    --fontsize-40: 40px;
+    --fontsize-26: 26px;
+    --fontsize-22: 22px;
+    --fontsize-18: 18px;
 }
 
 /* ____________________________________________ Container */
@@ -46,11 +44,11 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--backGround);
+    background-color: var(--background);
 }
 .header__logo {
     font-family: 'Lilita One', cursive;
-    font-size: var(--logoFontSize);
+    font-size: var(--fontsize-50);
 }
 .header__inner {
     margin: 12px 0;
@@ -64,7 +62,7 @@
     top: 100%;
     left: 0;
     text-align: right;
-    background-color: var(--backGround);
+    background-color: var(--background);
     width: 100%;
 }
 .nav__items {
@@ -111,7 +109,7 @@
     height: 100vh;
     padding: 20px 10px;
     text-align: center;
-    background-color: var(--backGround);
+    background-color: var(--background);
     border-top: 1px solid #0ebe72;
     z-index: 999;
 }
@@ -129,14 +127,14 @@
     margin-top: 5px;
     padding: 10px 0;
     border-radius: 5px;
-    background-color: var(--oppositeBack);
-    border: 1px solid var(--backGround);
+    background-color: var(--opposite-background);
+    border: 1px solid var(--background);
 
     transition: all 0.3s linear;
 }
 .search-block__btn:hover {
     background-color: var(--white);
-    border: 1px solid var(--backGround);
+    border: 1px solid var(--background);
 }
 
 #search-btn__toggle {
@@ -232,7 +230,7 @@
     gap: 5px;
 }
 .section__title {
-    font-size: var(--sectionFontSize);
+    font-size: var(--fontsize-26);
 }
 
 /* ____________________________________________ Common image style */
@@ -243,23 +241,22 @@
 /* ____________________________________________ Introduction */
 .intro {
     padding: 150px 0 50px;
-    border-bottom: 1px solid var(--footerWhite);
+    border-bottom: 1px solid var(--footer-white);
 }
 .intro__inner {
-    text-align: center;
     display: grid;
     gap: 20px;
-    align-items: center;
 }
 .intro__title {
-    font-size: var(--bigFontSize);
+    font-size: var(--fontsize-40);
 }
 .intro__text {
-    font-size: var(--subFontSize);
+    font-size: var(--fontsize-18);
 }
 .btn {
-    background-color: var(--backGround);
-    border: 1px solid var(--backGround);
+    text-align: center;
+    background-color: var(--background);
+    border: 1px solid var(--background);
     padding: 15px 0;
     width: 100%;
     font-size: 18px;
@@ -274,7 +271,6 @@
 }
 @media (min-width: 481px) {
     .btn {
-        margin: 0 auto;
         width: 50%;
     }
 }
@@ -282,15 +278,17 @@
     .btn {
         width: 25%;
     }
-    .intro {
-        padding: 200px 0 100px;
+    .intro__inner {
+        padding: 20vh 0 20vh;
+        width: 70%;
     }
 }
+
 
 /* ____________________________________________ News */
 .news {
     padding: 25px 0 60px;
-    border-bottom: 1px solid var(--footerWhite);
+    border-bottom: 1px solid var(--footer-white);
 }
 .news__inner {
     margin-top: 25px;
@@ -302,8 +300,9 @@
     width: 50%;
     height: 100%;
     padding: 10px;
-    border: 0.1px solid rgb(228, 228, 228);
-    box-shadow: 5px 5px #0FFF95;
+    border-left: 3px solid var(--background);
+    border-top: 2px solid var(--background);
+    /* box-shadow: 5px 5px #0FFF95; */
 }
 .news__items {
     width: 100%;
@@ -314,8 +313,9 @@
     display: grid;
     gap: 5px;
     padding: 10px;
-    border: 0.1px solid rgb(228, 228, 228);
-    box-shadow: 5px 5px #0FFF95;
+    border-left: 3px solid var(--background);
+    border-top: 2px solid var(--background);
+    /* box-shadow: 5px 5px #0FFF95; */
 }
 .news__title {
     font-weight: 700;
@@ -332,12 +332,12 @@
     margin-top: 20px;
     float: right;
     cursor: pointer;
-    font-size: var(--subFontSize);
+    font-weight: 700;
     border-bottom: 1px solid var(--black);
 }
 .news__btn:hover {
-    color: var(--backGround);
-    border-bottom: 1px solid var(--backGround);
+    color: var(--background);
+    border-bottom: 1px solid var(--background);
 }
 .news__img {
     display: none;
@@ -367,13 +367,13 @@
 /* ____________________________________________ Opportunities */
 .oppor {
     padding: 25px 0;
-    border-bottom: 1px solid var(--footerWhite);
+    border-bottom: 1px solid var(--footer-white);
 }
 .oppor__inner {
     margin-top: 25px;
 }
 .oppor__title {
-    font-size: var(--subFontSize);
+    font-size: var(--fontsize-16);
     font-weight: 700;
 }
 .oppor__items {
@@ -388,7 +388,7 @@
     width: 100%;
 }
 .oppor__img {
-    box-shadow: 5px 5px var(--backGround);
+    box-shadow: 5px 5px var(--background);
     margin-bottom: 12px;
     width: 100%;
 }
@@ -417,7 +417,7 @@
 /* ____________________________________________ Stats */
 .stats {
     padding: 25px 0;
-    border-bottom: 1px solid var(--footerWhite);
+    border-bottom: 1px solid var(--footer-white);
 }
 .stats__inner {
     margin-top: 30px;
@@ -435,7 +435,7 @@
     text-align: center;
 }
 .stats__title, .stats__info {
-    font-size: var(--titleFontSize);
+    font-size: var(--fontsize-22);
 }
 .stats__img {
     width: 50px;
@@ -446,7 +446,7 @@
         grid-template-columns: 1fr 1fr;
     }
     .stats__title, .stats__info {
-        font-size: var(--bigtitleFontSize);
+        font-size: var(--fontsize-26);
     }
 }
 @media (min-width: 769px) {
@@ -458,7 +458,7 @@
 /* ____________________________________________ Students */
 .students {
     padding: 25px 0;
-    border-bottom: 1px solid var(--footerWhite);
+    border-bottom: 1px solid var(--footer-white);
 }
 .students__items {
     margin-top: 25px;
@@ -492,10 +492,10 @@
     transition: all 0.4s linear;
 }
 .students__title {
-    font-size: var(--bigtitleFontSize);
+    font-size: var(--fontsize-26);
 }
 .students__subtitle {
-    font-size: var(--subFontSize);
+    font-size: var(--fontsize-22);
 }
 .students__content:hover {
     opacity: 1;
@@ -535,7 +535,7 @@
 /* ____________________________________________ Footer */
 .footer {
     background-color: #333;
-    color: var(--footerWhite);
+    color: var(--footer-white);
     padding: 25px 0;
 }   
 .footer__inner {
@@ -548,7 +548,7 @@
     gap: 5px;
 }
 .footer__link{
-    color: var(--footerWhite);
+    color: var(--footer-white);
 }
 .footer__link:hover {
     color: #0FFF95;
