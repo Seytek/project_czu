@@ -242,8 +242,28 @@
 .intro {
     padding: 150px 0 50px;
     border-bottom: 1px solid var(--footer-white);
+    background: url(../images/students/students3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--footer-white);
+}
+.intro__container {
+    z-index: 1;
+}
+.intro__overlay {
+    position: absolute;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    top: 0;
+    left: 0;
 }
 .intro__inner {
+    position: relative;
+    z-index: 999;
     display: grid;
     gap: 20px;
 }
@@ -272,6 +292,9 @@
 @media (min-width: 481px) {
     .btn {
         width: 50%;
+    }
+    .intro {
+        background-position: unset;
     }
 }
 @media (min-width: 1025px) {
@@ -421,7 +444,7 @@
     position: relative;
     overflow: hidden;
     background-color: rgba(10, 47, 75, 0.7);
-    color: var(--white);
+    color: var(--footer-white);
 }
 .stats__background {
     position: absolute;
@@ -447,7 +470,7 @@
 .stats__title, .stats__info {
     font-size: var(--fontsize-22);
 }
-.stats__img { /* have no time to change the color for svg now */
+.stats__img {
     width: 60px;
     height: 60px;
 }
