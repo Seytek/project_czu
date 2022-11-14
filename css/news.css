@@ -16,22 +16,22 @@
     max-width: 1200px;
     text-align: center;
 }
-@media (max-width: 1300px) {
-    .container {
-        max-width: 991px;
-    }
-}
-@media (max-width: 1100px) {
-    .container {
-        max-width: 900px;
-    }
-}
-@media (max-width: 910px) {
-    .container {
-        padding: 0 30px;
-    }
+@media screen and (min-width: 910px){
+    .container{max-width: 900px;
+        padding: 0;
+    }    
 }
 
+@media screen and (min-width: 1100px){
+    .container{max-width: 991px;
+        padding: 0;
+    }
+}
+@media screen and (min-width: 1300px){
+    .container{max-width: 1200px;
+        padding: 0;
+    }
+}
 
 /* ____________________________________________ Header */
 .header {
@@ -134,16 +134,14 @@
 #search-btn__toggle:checked ~ .search-block {
     display: block;
 }
-@media (max-width: 780px) {
+@media screen and (min-width: 779px) {
     .search-block {
-        height: 100vh;
+        height: auto;
     }
     .search-block__btn {
-        margin-top: 10px;
-        display: inline-block;
+        margin-top: 0px;
     }
 }
-
 
 /* ____________________________________________ Menu/Burger */
 .nav__burger {
@@ -232,12 +230,14 @@
 .intro__text {
     font-size: 22px;
 }
-
+/* 
 @media (max-width: 780px) {
     .btn {
         width: calc(100%/2);
     }
 }
+commenting this out as there is no .btn class in news.html
+*/
 
 /* ____________________________________________ News */
 /*the goal is to make it look lees cramped. maybe add some pictures or
@@ -264,12 +264,9 @@ ul{
 .section__subtitle {
     font-size: 20px;
 }
-@media (max-width: 780px) {
+@media screen and (min-width: 780px) {
     .section__title {
-        font-size: 26px;
-    }
-    .section__subtitle {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
