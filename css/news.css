@@ -2,10 +2,12 @@
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
-    --background: #0FFF95;
-    --darkmaincolor: #0ebe72;
-    --oppositeback: #f0006a;
+    --main: #ffba2f;
+    --backround: #D5D5D5;
+    --darkmaincolor: #134074;
+    --oppositeback: #13315C;
     --footerwhite: rgb(228, 228, 228);
+    background-color: var(--backround);
 }
 
 
@@ -41,7 +43,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--background);
+    background-color: var(--main);
 }
 .header__logo {
     font-family: 'Lilita One', cursive;
@@ -59,7 +61,7 @@
     top: 100%;
     left: 0;
     text-align: right;
-    background-color: var(--background);
+    background-color: var(--main);
     width: 100%;
 }
 .nav__items {
@@ -105,7 +107,7 @@
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    background-color: var(--background);
+    background-color: var(--main);
     border-top: 1px solid #0ebe72;
     z-index: 999;
 }
@@ -119,13 +121,13 @@
     padding: 10px 20px;
     border-radius: 5px;
     background-color: var(--oppositeback);
-    border: 1px solid var(--background);
+    border: 1px solid var(--main);
 
     transition: all 0.3s linear;
 }
 .search-block__btn:hover {
     background-color: var(--white);
-    border: 1px solid var(--background);
+    border: 1px solid var(--main);
 }
 
 #search-btn__toggle {
@@ -288,6 +290,7 @@ ul{
     display: grid;
     gap: 15px;
     border-radius: 5px;
+    background-color: var(--white);
 
     transition: all 0.2s linear;
 }
@@ -306,7 +309,7 @@ ul{
 .event__more_btn {
     font-size: 18px;
     text-align: right;
-    color: #0ebe72;
+    color: var(--darkmaincolor);
     cursor: pointer;
 
     transition: color 0.5s linear;
@@ -356,7 +359,7 @@ ul{
     display: none;
 }
 .switch__label {
-    background-color: var(--footerwhite);
+    background-color: var(--main);
     padding: 10px;
     cursor: pointer;
     width: 25%;
