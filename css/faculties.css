@@ -2,7 +2,7 @@
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
-    --background: #0FFF95;
+    --background: #EC8C19;
     --oppositeback: #f0006a;
     --footerwhite: rgb(228, 228, 228);
 }
@@ -69,6 +69,11 @@
 .nav__item {
     display: inline-block;
     transition: .3s linear;
+}
+.nav__item_2 {
+    border-bottom: 3.5px solid currentColor;
+    display: inline-block;
+    line-height: 1.50;
 }
 .nav__item::after {
     content: "";
@@ -246,9 +251,11 @@
 .section__info {
     display: grid;
     gap: 5px;
+    padding-top: 100px;
+    padding-left: 25px;
 }
 .section__title {
-    font-size: 30px;
+    font-size: 50px;
 }
 .section__title_about {
     width: 70%;
@@ -257,7 +264,9 @@
     border-bottom: 2px solid var(--black);
 }
 .section__subtitle {
-    font-size: 20px;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-right: 250px;
 }
 @media (max-width: 780px) {
     .section__title {
@@ -268,6 +277,85 @@
     }
 }
 
+
+/* ____________________________________________ Faculties */
+.facul {
+    border-top: 1px solid var(--footerwhite);
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* ____________________________________________ Faculties line */
+.facul__line {
+    border-top: 1px solid var(--footerwhite);
+    margin-top: 60px;
+    padding-bottom: 60px;
+    padding-bottom: 1px;
+}
+.section__line {
+    font-size: 20px;
+    border-top: 3px solid #EC8C19;
+    padding: 35px 0 7px;
+    margin-top: -1px;
+    display: flex;
+}
+.facul__line {
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+
+/* ____________________________________________ Faculties info */
+.facul__list__inner {
+    margin: 50px auto;
+}
+.facul__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+}
+.facul__img {
+    box-shadow: 5px 5px #EC8C19;
+    margin-bottom: 12px;
+    width: 200%;
+}
+.facul__item {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.facul__list_subtitle {
+    text-align: right;
+    padding-left: 175px;
+}
+.facul__more {
+    background-color: var(--background);
+    border: 1px solid var(--background);
+    padding: 15px 0;
+    width: calc(100%/4);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 450px;
+    margin-top: 25px;
+
+    transition: all .5s linear;
+}
+.facul__more:hover {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+@media (max-width: 780px) {
+    .facul__more {
+        width: calc(100%/2);
+    }
+}
 
 /* ____________________________________________ Section title */
 .dev__comment {

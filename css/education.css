@@ -2,7 +2,7 @@
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
-    --background: #0FFF95;
+    --background: #0040ff;
     --oppositeback: #f0006a;
     --footerwhite: rgb(228, 228, 228);
 }
@@ -70,6 +70,11 @@
     display: inline-block;
     transition: .3s linear;
 }
+.nav__item_1 {
+    border-bottom: 3.5px solid currentColor;
+    display: inline-block;
+    line-height: 1.50;
+}
 .nav__item::after {
     content: "";
     display: block;
@@ -92,7 +97,9 @@
 
 /* ____________________________________________ Search button */
 .search-btn__img {
-    width: 20px;
+    width: 23px;
+    padding-top: 14px;
+    padding-left: 2px;
 }
 .search-block {
     display: none;
@@ -211,7 +218,6 @@
     }
 }
 
-
 /* ____________________________________________ Footer */
 .footer {
     background-color: #333;
@@ -241,14 +247,37 @@
     height: 25px;
 }
 
-
 /* ____________________________________________ Section title */
 .section__info {
-    display: grid;
     gap: 5px;
+    display: flex;
+}
+ul {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 20px 0px 0px 0px;
+    text-align: left;
+    padding-right: 35px;
+    border-right: 2px dashed #0040ff;
+}
+li {
+    margin: 10px 0px;
+}
+.section__info_opportunities {
+    gap: 5px;
+    display: flex;
 }
 .section__title {
     font-size: 30px;
+    width: 70%;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+.section__title_1 {
+    font-size: 30px;
+    border-top: 3px solid #0040ff;
+    padding: 35px 0 50px;
+    margin-top: -1px;
 }
 .section__title_about {
     width: 70%;
@@ -269,16 +298,94 @@
 }
 
 
-/* ____________________________________________ Section title */
-.dev__comment {
-    text-align: center;
-    margin: 50vh;
-    font-size: 30px;
+/* ____________________________________________ Education */
+.education {
+    margin: 150px 0 50px;
+}
+.education__inner {
+    margin: 30px 0;
+}
+.education__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.education__text {
+    line-height: 1.8;
+}
+.education__img {
+    border-radius: 5px;
+}
+.education_images {
+    display: grid;
+    grid-template-rows: repeat(4, 115px);
+    border: 4px solid #0040ff;
+    width: 450px;
+}
+#education_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.education__img_1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.education__img_2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.education__img_3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.education__img_4 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
 
 
-
-
+/* ____________________________________________ Opportunities */
+.opportunities {
+    border-top: 1px solid var(--footerwhite);
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+.opportunities__inner {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+}
+.opportunities__subtitle {
+    font-weight: 700;
+    margin: 15px 0;
+    border-right: 2px solid #0040ff;
+    width: 125px;
+}
+.opportunities__item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    border: 0.1px solid rgb(228, 228, 228);
+    box-shadow: 5px 5px #0040ff;
+    text-align: center;
+}
+.opportunities__title {
+    padding-right: 15px;
+    width: 83.33333%;
+    line-height: 1.6;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 /* ------------------- We don't need it now ------------------------*/
 /* We need it in order to attach the .footer to the end of the page */
