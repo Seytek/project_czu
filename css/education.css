@@ -290,10 +290,20 @@ li {
 }
 @media (max-width: 780px) {
     .section__title {
-        font-size: 26px;
+        font-size: 14px;
+        right: 5px;
+        position: relative;
     }
     .section__subtitle {
         font-size: 20px;
+    }
+    li {
+        font-size: 10px;
+    }
+    ul {
+        position: relative;
+        padding-right: 5px;
+        right: 15px;
     }
 }
 
@@ -351,8 +361,19 @@ li {
     grid-column-start: 1;
     grid-column-end: 5;
 }
-
-
+@media (max-width: 780px) {
+    .education_images {
+        width: fit-content;
+        height: 608px;
+    }
+    .education {
+        position: relative;
+        top: -55px;
+    }
+    .education__text {
+        font-size: 10px;
+    }
+}
 /* ____________________________________________ Opportunities */
 .opportunities {
     border-top: 1px solid var(--footerwhite);
@@ -385,6 +406,16 @@ li {
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+@media (max-width: 780px) {
+    .opportunities__title {
+        font-size: 10px;
+    }
+    .opportunities__inner {
+        width: 500px;
+        position: relative;
+        left: -20px;
+    }
 }
 
 /* ------------------- We don't need it now ------------------------*/
@@ -522,4 +553,4 @@ a {
 
 .intro_education2 {
     padding: 50px 10px 50px 10px;
-} */
+} /*

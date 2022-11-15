@@ -255,7 +255,10 @@
     padding-left: 25px;
 }
 .section__title {
-    font-size: 50px;
+    font-size: 30px;
+    font-style: italic;
+    position: relative;
+    left: -25px;
 }
 .section__title_about {
     width: 70%;
@@ -264,16 +267,49 @@
     border-bottom: 2px solid var(--black);
 }
 .section__subtitle {
-    font-size: 30px;
+    font-size: 20px;
     padding-top: 25px;
     padding-right: 250px;
 }
+h4 {
+    font-size: 23px;
+}
 @media (max-width: 780px) {
     .section__title {
-        font-size: 26px;
+        font-size: 20px;
+        position: relative;
+        left: -35px;
+        top: -35px;
     }
     .section__subtitle {
-        font-size: 20px;
+        font-size: 17px;
+        width: 500px;
+        position: relative;
+        left: -15px;
+        line-height: 25px;
+        top: -20px;
+    }
+    body .facul__items {
+        position: relative;
+        top: -35px;
+        display: block;
+    }
+    body .facul__list_subtitle {
+        position: relative;
+        line-height: 20px;
+        margin-left: -175px;
+        text-align: left;
+    }
+    body .facul__img {
+        width: 150px;
+    }
+    body .facul__list__inner {
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    body .facul__item {
+        flex: 50%;
+        padding: 0 4px;
     }
 }
 
@@ -332,6 +368,7 @@
 .facul__list_subtitle {
     text-align: right;
     padding-left: 175px;
+    font-size: 17px;
 }
 .facul__more {
     background-color: var(--background);
@@ -352,8 +389,32 @@
     border: 1px solid var(--black);
 }
 @media (max-width: 780px) {
+    body .facul__items {
+        position: relative;
+        top: -35px;
+        display: block;
+    }
+    body .facul__list_subtitle {
+        position: relative;
+        line-height: 20px;
+        margin-left: -175px;
+        text-align: left;
+    }
+    body .facul__img {
+        width: 150px;
+    }
+    body .facul__list__inner {
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    body .facul__item {
+        flex: 50%;
+        padding: 0 4px;
+    }
     .facul__more {
         width: calc(100%/2);
+        position: relative;
+        left: -300px;
     }
 }
 
