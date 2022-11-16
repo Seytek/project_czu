@@ -5,6 +5,12 @@
     --background: #EC8C19;
     --oppositeback: #f0006a;
     --footerwhite: rgb(228, 228, 228);
+
+    --fontsize-50: 50px;
+    --fontsize-40: 40px;
+    --fontsize-26: 26px;
+    --fontsize-22: 22px;
+    --fontsize-18: 18px;
 }
 
 /* ____________________________________________ Container */
@@ -42,7 +48,7 @@
 }
 .header__logo {
     font-family: 'Lilita One', cursive;
-    font-size: 50px;
+    font-size: var(--fontsize-50);
 }
 .header__inner {
     margin: 12px 0;
@@ -69,11 +75,6 @@
 .nav__item {
     display: inline-block;
     transition: .3s linear;
-}
-.nav__item_2 {
-    border-bottom: 3.5px solid currentColor;
-    display: inline-block;
-    line-height: 1.50;
 }
 .nav__item::after {
     content: "";
@@ -319,6 +320,7 @@ h4 {
     border-top: 1px solid var(--footerwhite);
     margin-top: 60px;
     padding-bottom: 60px;
+    overflow: hidden;
 }
 
 
@@ -366,8 +368,6 @@ h4 {
     width: 100%;
 }
 .facul__list_subtitle {
-    text-align: right;
-    padding-left: 175px;
     font-size: 17px;
 }
 .facul__more {

@@ -26,7 +26,6 @@
     width: 100%;
     padding: 0 15px;
 }
-
 @media (min-width: 769px) {
     .container {
         max-width: 769px;
@@ -152,7 +151,6 @@
 #search-btn__toggle:checked ~ .search-block {
     display: block;
 }
-
 @media (min-width: 481px) {
     .search-block {
         grid-template-columns: 1fr 1fr;
