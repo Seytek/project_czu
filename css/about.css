@@ -3,32 +3,38 @@
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
     --background: #0FFF95;
-    --oppositeback: #f0006a;
-    --footerwhite: rgb(228, 228, 228);
+    --opposite-background: #f0006a;
+    --footer-white: rgb(228, 228, 228);
+
+    --fontsize-50: 50px;
+    --fontsize-40: 40px;
+    --fontsize-26: 26px;
+    --fontsize-22: 22px;
+    --fontsize-20: 20px;
+    --fontsize-18: 18px;
 }
 
 /* ____________________________________________ Container */
 .container {
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    padding: 0 15px;
 }
-@media (max-width: 1300px) {
+@media (min-width: 769px) {
     .container {
-        max-width: 991px;
+        max-width: 769px;
     }
 }
-@media (max-width: 1100px) {
+@media (min-width: 1025px) {
     .container {
-        max-width: 900px;
+        max-width: 1024px;
     }
 }
-@media (max-width: 910px) {
+@media (min-width: 1201px) {
     .container {
-        padding: 0 30px;
+        max-width: 1200px;
     }
 }
-
 
 /* ____________________________________________ Header */
 .header {
@@ -42,7 +48,7 @@
 }
 .header__logo {
     font-family: 'Lilita One', cursive;
-    font-size: 50px;
+    font-size: var(--fontsize-50);
 }
 .header__inner {
     margin: 12px 0;
@@ -100,22 +106,28 @@
     top: 100%; /* it will be after our .header block */
     left: 0;
     width: 100%;
-    padding: 20px 0;
+    height: 100vh;
+    padding: 20px 10px;
     text-align: center;
     background-color: var(--background);
     border-top: 1px solid #0ebe72;
     z-index: 999;
 }
 .search-block__field {
-    padding: 10px 40px;
+    padding: 10px 10px;
     border-radius: 5px;
+    width: 100%;
     border: none;
     background-color: var(--white);
+    display: block;
+    text-overflow: ellipsis;
 }
 .search-block__btn {
-    padding: 10px 20px;
+    display: block;
+    margin-top: 5px;
+    padding: 10px 0;
     border-radius: 5px;
-    background-color: var(--oppositeback);
+    background-color: var(--opposite-background);
     border: 1px solid var(--background);
 
     transition: all 0.3s linear;
@@ -131,16 +143,17 @@
 #search-btn__toggle:checked ~ .search-block {
     display: block;
 }
-@media (max-width: 780px) {
+
+@media (min-width: 481px) {
     .search-block {
-        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        height: 40vh;
     }
     .search-block__btn {
-        margin-top: 10px;
         display: inline-block;
+        padding: 10px 25px;
     }
 }
-
 
 /* ____________________________________________ Menu/Burger */
 .nav__burger {
@@ -194,7 +207,7 @@
     top: 0;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 769px) {
     .nav-toggle__label {
         display: none;
     }
@@ -203,41 +216,12 @@
         justify-content: space-between;
     }
     .nav {
-        all: unset; /* delete previous css styles on .nav */
+        all: unset;
     }
     .nav__items {
         display: flex;
         margin: auto 0;
     }
-}
-
-/* ____________________________________________ Footer */
-.footer {
-    background-color: #333;
-    color: var(--footerwhite);
-    margin-top: auto;
-}
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
-}
-.footer__block {
-    display: grid;
-    gap: 5px;
-}
-.footer__link{
-    color: var(--footerwhite);
-}
-.footer__link:hover {
-    color: #0FFF95;
-}
-.social {
-    margin-top: 5px;
-}
-.social__item {
-    width: 25px;
-    height: 25px;
 }
 
 /* ____________________________________________ Section title */
@@ -246,46 +230,114 @@
     gap: 5px;
 }
 .section__title {
-    font-size: 30px;
+    font-size: var(--fontsize-20);
 }
-.section__title_about {
-    width: 70%;
+
+/* ____________________________________________ Common image style */
+.img {
+    border-radius: 4px;
 }
+
+/* ____________________________________________ Footer */
+.footer {
+    background-color: #333;
+    color: var(--footer-white);
+    padding: 25px 0;
+}   
+.footer__inner {
+    display: grid;    
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer__block {
+    display: grid;
+    gap: 5px;
+}
+.footer__link{
+    color: var(--footer-white);
+}
+.footer__link:hover {
+    color: #0FFF95;
+}
+.social {
+    display: flex;
+    gap: 5px;
+}
+.social__item {
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 769px) {
+    .footer__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+    .made-by {
+        text-align: right;
+    }
+}
+
+
+
+/* ____________________________________________ Section title about ---------------*/ 
 .underline {
     border-bottom: 2px solid var(--black);
 }
-.section__subtitle {
-    font-size: 20px;
-}
-@media (max-width: 780px) {
-    .section__title {
-        font-size: 26px;
+@media (min-width: 481px) {
+    .section__title_about {
+        font-size: var(--fontsize-22);
     }
-    .section__subtitle {
-        font-size: 20px;
+}
+@media (min-width: 1025px) {
+    .section__title_about {
+        font-size: var(--fontsize-26);
+    }
+    .underline {
+        font-size: var(--fontsize-26);
     }
 }
 
 
 /* ____________________________________________ About */
 .about {
-    margin: 150px 0 50px;
+    margin: 120px 0 50px;
 }
 .about__inner {
     margin: 30px 0;
+    display: grid;
+    gap: 30px;
 }
 .about__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 20px;
 }
 .about__text {
-    line-height: 1.8;
+
+}
+.about__img-block {
+    display: grid;
+    gap: 10px;
 }
 .about__img {
     border-radius: 5px;
+    width: 100%;
 }
 
+@media (min-width: 481px) {
+    .about__text {
+        font-size: var(--fontsize-18);
+    }
+}
+@media (min-width: 1025px) {
+    .about__content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1201px) {
+    .about__text {
+        font-size: var(--fontsize-20);
+    }
+}
 
 /* ____________________________________________ Facts */
 .facts {
@@ -294,12 +346,23 @@
 }
 .facts__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
 .facts__subtitle {
     font-weight: 700;
     margin: 15px 0;
+}
+.facts__images {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    margin: auto;
+}
+.image__item {
+}
+.image {
+    width: 100%;
+    border-radius: 5px;
 }
 .facts__item {
     display: flex;
@@ -307,28 +370,8 @@
     line-height: 1.5;
 }
 
-
-.facts__images {
-    display: grid;
-    gap: 15px;
-    justify-content: center;
+@media (min-width: 769px) {
+    .facts__images {
+        grid-template-columns: 1fr 1fr;
+    }
 }
-.image__item {
-    width: 350px;
-}
-.image {
-    border-radius: 5px;
-}
-.image__title {
-    width: 100%;
-}
-
-
-
-/* ------------------- We don't need it now ------------------------*/
-/* We need it in order to attach the .footer to the end of the page */
-/* .page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
