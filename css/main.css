@@ -2,11 +2,7 @@
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
-    --background: #0FFF95;
-    --opposite-background: #f0006a;
     --footer-white: #E4E4E4;
-
-
     --color-orange: #fa5f1c;
     --color-orange-rgb: rgb(250, 95, 28, 0.4);
     --color-darkblue: #001941;
@@ -236,15 +232,67 @@
     display: grid;
     gap: 5px;
 }
+.section__info {
+    display: grid;
+    gap: 5px;
+}
 .section__title {
     font-size: var(--fontsize-26);
     color: var(--color-darkblue);
+}
+.section__subtitle {
+    font-size: 20px;
+}
+@media (min-width: 780px) {
+    .section__title {
+        font-size: 30px;
+    }
 }
 
 /* ____________________________________________ Common image style */
 .img {
     border-radius: 4px;
 }
+
+/* ____________________________________________ Footer */
+.footer {
+    background-color: var(--color-darkblue);
+    color: var(--footer-white);
+    padding: 25px 0;
+}   
+.footer__inner {
+    display: grid;    
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer__block {
+    display: grid;
+    gap: 5px;
+}
+.footer__link{
+    color: var(--footer-white);
+}
+.footer__link:hover {
+    color: var(--footer-white);
+}
+.social {
+    display: flex;
+    gap: 5px;
+}
+.social__item {
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 769px) {
+    .footer__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+    .made-by {
+        text-align: right;
+    }
+}
+
 /* __________________________________________everything above works for other pages _________________________________________ */
 
 
@@ -293,7 +341,7 @@
     font-size: 18px;
     font-weight: 700;
     border-radius: 10px;
-
+    
     transition: all .5s linear;
 }
 .btn:hover {
@@ -525,6 +573,7 @@
 .students__img {
     z-index: 2;
     width: 100%;
+    height: 100%;
 }
 .students__content {
     position: absolute;
@@ -583,42 +632,3 @@
     }
 }
 
-
-/* ____________________________________________ Footer */
-.footer {
-    background-color: var(--color-darkblue);
-    color: var(--footer-white);
-    padding: 25px 0;
-}   
-.footer__inner {
-    display: grid;    
-    justify-content: space-between;
-    gap: 40px;
-}
-.footer__block {
-    display: grid;
-    gap: 5px;
-}
-.footer__link{
-    color: var(--footer-white);
-}
-.footer__link:hover {
-    color: #0FFF95;
-}
-.social {
-    display: flex;
-    gap: 5px;
-}
-.social__item {
-    width: 40px;
-    height: 40px;
-}
-
-@media (min-width: 769px) {
-    .footer__inner {
-        grid-template-columns: 1fr 1fr;
-    }
-    .made-by {
-        text-align: right;
-    }
-}

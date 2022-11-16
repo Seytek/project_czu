@@ -2,34 +2,39 @@
     --black: rgb(19, 19, 19);
     --white: rgb(255, 255, 255);
     --gray: rgb(104, 104, 104);
-    --background: #274C77;
-    --back_light: #6096BA;
-    --oppositeback: #D81159;
-    --footerwhite: rgb(228, 228, 228);
+    --footer-white: #E4E4E4;
+    --color-orange: #fa5f1c;
+    --color-orange-rgb: rgb(250, 95, 28, 0.4);
+    --color-darkblue: #001941;
+    --color-darkblue-rgb: rgb(0, 25, 65, 0.6);
+
+
+    --fontsize-50: 50px;
+    --fontsize-40: 40px;
+    --fontsize-26: 26px;
+    --fontsize-22: 22px;
+    --fontsize-18: 18px;
 }
 
 /* ____________________________________________ Container */
 .container {
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
-    padding: 0 30px;
+    padding: 0 15px;
 }
-/*hope this is now fixed and works as it should, now with mobile-first approach*/
-@media screen and (min-width: 910px){
-    .container{max-width: 900px;
-        padding: 0;
-    }    
-}
-
-@media screen and (min-width: 1100px){
-    .container{max-width: 991px;
-        padding: 0;
+@media (min-width: 769px) {
+    .container {
+        max-width: 769px;
     }
 }
-@media screen and (min-width: 1300px){
-    .container{max-width: 1200px;
-        padding: 0;
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1200px;
     }
 }
 
@@ -41,12 +46,12 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--background);
+    background-color: var(--color-darkblue);
 }
 .header__logo {
     font-family: 'Lilita One', cursive;
-    font-size: 50px;
-    color: var(--white);
+    font-size: var(--fontsize-50);
+    color: var(--footer-white);
 }
 .header__inner {
     margin: 12px 0;
@@ -60,7 +65,7 @@
     top: 100%;
     left: 0;
     text-align: right;
-    background-color: var(--background);
+    background-color: var(--color-darkblue);
     width: 100%;
 }
 .nav__items {
@@ -69,20 +74,19 @@
     gap: 10px;
     margin-right: 30px;
     margin-bottom: 30px;
-    
 }
 .nav__item {
     display: inline-block;
     transition: .3s linear;
-    color: var(--white);
+    color: var(--footer-white);
 }
 .nav__item::after {
-    content: "";
+    content: "";    
     display: block;
     margin-top: 3px;
     width: 0%;
     height: 3px;
-    background-color: var(--white);
+    background-color: var(--footer-white);
 
     transition: .3s linear;
 }
@@ -107,31 +111,34 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 20px 0;
+    padding: 20px 10px;
     text-align: center;
-    background-color: var(--background);
-    border-top: 1px solid var(--oppositeback);
+    background-color: var(--color-darkblue);
+    border-top: 1px solid var(--color-darkblue);
     z-index: 999;
 }
 .search-block__field {
-    padding: 10px 40px;
+    padding: 10px 10px;
     border-radius: 5px;
+    width: 100%;
     border: none;
     background-color: var(--white);
+    display: block;
+    text-overflow: ellipsis;
 }
 .search-block__btn {
-    display:inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
+    display: block;
+    margin-top: 5px;
+    padding: 10px 0;
     border-radius: 5px;
-    background-color: var(--oppositeback);
-    border: 1px solid var(--background);
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
 
     transition: all 0.3s linear;
 }
 .search-block__btn:hover {
     background-color: var(--white);
-    border: 1px solid var(--background);
+    border: 1px solid var(--color-darkblue);
 }
 
 #search-btn__toggle {
@@ -140,19 +147,20 @@
 #search-btn__toggle:checked ~ .search-block {
     display: block;
 }
-
-@media (min-width: 779px) {
+@media (min-width: 481px) {
     .search-block {
-        height: auto;
+        grid-template-columns: 1fr 1fr;
+        height: 40vh;
     }
     .search-block__btn {
-        margin-top: 0px;
+        display: inline-block;
+        padding: 10px 25px;
     }
 }
 
 /* ____________________________________________ Menu/Burger */
 .nav__burger {
-    background-color: var(--black);
+    background-color: var(--footer-white);
     display: block;
     height: 3px;
     width: 25px;
@@ -161,7 +169,7 @@
 .nav__burger::after,
 .nav__burger::before {
     content: "";
-    background-color: var(--black);
+    background-color: var(--footer-white);
     display: block;
     height: 100%;
     width: 100%;
@@ -202,7 +210,7 @@
     top: 0;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 769px) {
     .nav-toggle__label {
         display: none;
     }
@@ -211,7 +219,7 @@
         justify-content: space-between;
     }
     .nav {
-        all: unset; /* delete previous css styles on .nav */
+        all: unset;
     }
     .nav__items {
         display: flex;
@@ -224,8 +232,13 @@
     display: grid;
     gap: 5px;
 }
+.section__info {
+    display: grid;
+    gap: 5px;
+}
 .section__title {
-    font-size: 26px;
+    font-size: var(--fontsize-26);
+    color: var(--color-darkblue);
 }
 .section__subtitle {
     font-size: 20px;
@@ -235,10 +248,59 @@
         font-size: 30px;
     }
 }
+
+/* ____________________________________________ Common image style */
+.img {
+    border-radius: 4px;
+}
+
+/* ____________________________________________ Footer */
+.footer {
+    background-color: var(--color-darkblue);
+    color: var(--footer-white);
+    padding: 25px 0;
+}   
+.footer__inner {
+    display: grid;    
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer__block {
+    display: grid;
+    gap: 5px;
+}
+.footer__link{
+    color: var(--footer-white);
+}
+.footer__link:hover {
+    color: var(--footer-white);
+}
+.social {
+    display: flex;
+    gap: 5px;
+}
+.social__item {
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 769px) {
+    .footer__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+    .made-by {
+        text-align: right;
+    }
+}
+
+/* ____________________________________________ section title campus */
 .section__title_campus {
     text-align: center;
     padding: 0 0 15px;
 }
+
+
+
 
 /* ____________________________________________ Introduction */
 .intro {
@@ -286,7 +348,7 @@
     width: 100%;
 }
 .points__img {
-    box-shadow: 5px 5px var(--oppositeback);
+    box-shadow: 5px 5px var(--color-orange);
     margin-bottom: 12px;
     width: 100%;
 }
@@ -315,36 +377,6 @@
     }
 }
 
-/* ____________________________________________ Footer */
-.footer {
-    background-color: #333;
-    color: var(--footerwhite);
-}
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
-}
-.footer__block {
-    display: grid;
-    gap: 5px;
-}
-.footer__link{
-    color: var(--footerwhite);
-}
-.footer__link:hover {
-    color: #0FFF95;
-}
-.social {
-    margin-top: 5px;
-}
-.social__item {
-    width: 25px;
-    height: 25px;
-}
-
-
-/* I guess I'll delete commented part, if necessary, we will take if from the github later */
 
 /*__________________________________________________________________ Map*/
 .map__wrapper {
@@ -362,7 +394,7 @@
 }
 .map__hotspot {
     display: block;
-    background: var(--oppositeback);
+    background: var(--color-orange);
     border: 2px solid var(--white);
     -webkit-transition: background .3s linear;
             transition: background .3s linear;
@@ -434,7 +466,7 @@
         margin-right: auto;
         position: absolute;
         width: 99%;
-        box-shadow: 5px 5px var(--oppositeback);
+        box-shadow: 5px 5px var(--color-orange);
     }
     .map__hotspot {
       position: absolute;
@@ -459,7 +491,7 @@
     .popup__inner {
       display: inline-block;
       white-space: nowrap;
-      background: var(--oppositeback);
+      background: var(--color-orange);
       border-radius: 4px;
     }
     .map__hotspot:focus .popup {
