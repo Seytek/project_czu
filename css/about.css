@@ -336,8 +336,11 @@
     }
 }
 @media (min-width: 1201px) {
+    .about__title {
+        font-size: 30px;
+    }
     .about__text {
-        font-size: var(--fontsize-20);
+        font-size: var(--fontsize-22);
     }
 }
 
@@ -358,7 +361,7 @@
     display: grid;
     gap: 15px;
     justify-content: center;
-    margin: auto;
+    margin-right: auto;
 }
 .image__item {
 }
