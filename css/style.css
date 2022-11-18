@@ -252,6 +252,7 @@
 /* ____________________________________________ Common image style */
 .img {
     border-radius: 4px;
+    width: 100%;
 }
 
 /* ____________________________________________ Footer */
@@ -628,4 +629,458 @@
         height: 100%;
     }
 }
+
+/* __________news.html__________news.html__________news.html__________news.html__________ */
+/* ____________________________________________ Introduction */
+.news-intro {
+    padding: 150px 0 0 0;
+}
+.news-intro__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.news-intro__title {
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.news-intro__text {
+    font-size: 22px;
+}
+.news__event {
+    margin: 20px 0;
+    text-align: left;
+}
+.news__event_ul{ /* changed to a random name of the class, because it may break other 'ul' in the future */
+    margin: 10px 0;
+}
+
+/* ____________________________________________ Events section */
+.events {
+    border-top: 1px solid var(--footer-white);
+    padding:30px 0 50px;
+
+}
+.event__items {
+    margin: 30px 15px 15px 15px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.event__item {
+    padding: 25px;
+    border: 1px solid var(--footer-white);
+    display: grid;
+    gap: 15px;
+    border-radius: 5px;
+    background-color: var(--white);
+
+    transition: all 0.2s linear;
+}
+.event__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 8px var(--footer-white);
+}
+.event__title {
+    font-weight: 700;
+    font-size: 19px;
+}
+.event__date {
+    color: var(--gray);
+    font-size: 19px;
+}
+.event__more_btn {
+    font-size: 18px;
+    text-align: right;
+    color: var(--color-orange);
+    cursor: pointer;
+    
+    transition: color 0.5s linear;
+}
+.event__more_btn:hover {
+    color: var(--black);
+}
+@media screen and (min-width: 580px){
+    .event__items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 780px){
+    .event__items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 1300px){
+    .event__items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/*___________________________________________ Switch*/
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.switch {
+    display: none;
+}
+.switch__label {
+    background-color: var(--footer-white);
+    padding: 10px;
+    cursor: pointer;
+    width: 25%;
+}
+.tab__item {
+    order: 1;
+    display: none;
+}
+.switch:checked + label + .tab__item { /* it means that after .switch must come immidiately label and than .tab__item */
+    display: block;
+}
+.switch:checked + label { 
+    background-color: var(--white);
+    color: var(--color-darkblue);
+    border-top: 3px solid var(--color-orange);
+}
+
+/* __________about.html__________about.html__________about.html__________about.html__________ */
+/* ____________________________________________ Section title about ---------------*/ 
+.underline {
+    border-bottom: 2px solid var(--black);
+}
+@media (min-width: 481px) {
+    .section__title_about {
+        font-size: var(--fontsize-22);
+    }
+}
+@media (min-width: 1025px) {
+    .section__title_about {
+        font-size: var(--fontsize-26);
+    }
+    .underline {
+        font-size: var(--fontsize-26);
+    }
+}
+
+
+/* ____________________________________________ About */
+.about {
+    margin: 120px 0 50px;
+}
+.about__inner {
+    margin: 30px 0;
+    display: grid;
+    gap: 30px;
+}
+.about__content {
+    display: grid;
+    gap: 20px;
+}
+.about__img-block {
+    display: grid;
+    gap: 10px;
+}
+.about__img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+@media (min-width: 481px) {
+    .about__text {
+        font-size: var(--fontsize-18);
+    }
+}
+@media (min-width: 1025px) {
+    .about__content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1201px) {
+    .about__title {
+        font-size: 30px;
+    }
+    .about__text {
+        font-size: var(--fontsize-22);
+    }
+}
+
+/* ____________________________________________ Facts */
+.facts {
+    border-top: 1px solid var(--footerwhite);
+    padding: 35px 0 50px;
+}
+.facts__inner {
+    display: grid;
+    gap: 50px;
+}
+.facts__subtitle {
+    font-weight: 700;
+    margin: 15px 0;
+}
+.facts__images {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    margin-right: auto;
+}
+.facts__item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    border-bottom: dashed 1px var(--black);
+}
+@media (min-width: 769px) {
+    .facts__images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* __________campus.html__________campus.html__________campus.html__________campus.html__________ */
+/* ____________________________________________ section title campus */
+.section__title_campus {
+    text-align: center;
+    padding: 0 0 15px;
+}
+
+/* ____________________________________________ Introduction */
+.campus-intro {
+    padding: 100px 0 0 0;
+}
+.campus-intro__images {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 5px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.campus-image{
+    max-height: 380px;
+    width: 380px;
+    object-fit: cover;
+}
+
+/* ____________________________________________ Points */
+.points__inner {
+    margin: 50px 0;
+}
+.points__title {
+    font-size: 22px;
+    font-weight: 700;
+}
+.points__items {
+    padding-top: 15px;
+    width: 100%;    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.points__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+.points__img {
+    box-shadow: 5px 5px var(--color-orange);
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+@media screen and (min-width: 580px) {
+    .points__inner {
+        margin: 30px auto;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .points__items {
+        grid-template-columns: 1fr 1fr;
+    }
+    .points__item {
+        gap: 6px;
+    }
+}
+
+@media screen and (min-width: 910px) {
+    .points__items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .points__item {
+        gap: 8px;
+    }
+}
+
+
+/*__________________________________________________________________ Map*/
+.map__wrapper {
+    display: block;
+    object-fit: fill;
+    position: relative;
+    max-width: auto;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.map__img {
+    display: none;
+}
+.map__hotspot {
+    display: block;
+    background: var(--color-orange);
+    border: 2px solid var(--white);
+    -webkit-transition: background .3s linear;
+            transition: background .3s linear;
+    text-decoration: none;
+    color: #ffffff;
+}
+/*Hotspots are points shown on the map*/
+#hotspot1 { /*Main building hotspot*/
+  left: 51%;
+  top: 48%; 
+}
+#hotspot2 { /*Gym hotspot*/
+  left: 48.5%;
+  top: 26%;
+}
+#hotspot3 { /*Dorms hotspot*/
+  left: 33%;
+  top: 40%;
+}
+#hotspot4 { /*Library hotspot*/
+    left: 63.5%;
+    top: 55%;
+}
+#hotspot5 { /*Lecture halls hotspot*/
+    left: 48%;
+    top: 69%; /*nice*/
+}
+#hotspot6 { /*Labs hotspot*/
+    left: 33%;
+    top: 49%;
+}
+#hotspot7 { /*Canteen hotspot*/
+    left: 34%;
+    top: 65%;
+}
+
+/*popus show after clicking on hotspots*/
+.popup__inner {
+  padding: 20px 15px;
+}
+.map__hotspot:focus .popup {
+  display: inline-block;
+}
+.popup__title {
+  margin: 0;
+}
+.popup__text {
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+}
+.popup__text br {
+  display: none;
+}
+.map__hotspot:focus .popup__text {
+  height: auto;
+}
+
+/*map is not displayed on mobile, there is a list of facilities instead*/
+@media screen and (min-width: 768px) { 
+    .map__inner {
+      position: relative;
+      height: 0;
+      padding-bottom: 53%;
+    }
+    .map__img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        width: 99%;
+        box-shadow: 5px 5px var(--color-orange);
+    }
+    .map__hotspot {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .map__hotspot:hover,
+    .map__hotspot:focus {
+      background: rgb(19, 19, 19);
+    }
+    .popup {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      -webkit-transition: opacity 0.5s ease-in-out;
+              transition: opacity 0.5s ease-in-out;
+      position: absolute;
+      box-shadow: 5px 5px rgb(19, 19, 19);
+    }
+    .popup__inner {
+      display: inline-block;
+      white-space: nowrap;
+      background: var(--color-orange);
+      border-radius: 4px;
+    }
+    .map__hotspot:focus .popup {
+      opacity: 1;
+      width: auto;
+      height: auto;
+    }
+    .popup--left-top {
+      right: 20px;
+      bottom: 0px;
+    }
+    .popup--right-top {
+      left: 20px;
+      bottom: -1px;
+    }
+    .popup--right-bottom {
+      left: 20px;
+      top: -1px;
+    }
+    .popup__text {
+      height: auto;
+    }
+    .popup__text br {
+      display: block;
+    }
+    .description__content p {
+      font-size: 30px;
+    }
+  }
+  
+
+
+
+/* __________departments.html__________departments.html__________departments.html__________departments.html__________ */
+
+
+
+
+
+/* __________education.html__________education.html__________education.html__________education.html__________ */
+
+
+
+/* __________faculties.html__________faculties.html__________faculties.html__________faculties.html__________ */
+
+
+
+
 
