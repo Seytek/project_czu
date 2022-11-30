@@ -1065,14 +1065,13 @@
     }
   }
   
-/* ____________________________________________ Events section */
+/* __________event.html__________event.html__________event.html__________event.html__________ */
 .event {
     padding: 100px 0 50px; /*changed top padding from 82px to 100px, it was blanding with the header on mobile*/
 }
 .event__img {
     max-width: 100%;
     object-fit: cover;
-    height: 100%;
     /*margin-left: -15px;
     margin-bottom: 15px;*/
 }
@@ -1088,9 +1087,9 @@
 .event__info {
     display: grid;
     gap: 10px;
+    padding-bottom: 10px;
 }
-<<<<<<< HEAD
-=======
+
 .calendar__title,
 .event__date_small,
 .event__permission {
@@ -1105,22 +1104,11 @@
 .calendar__items {
     margin-top: 5px;
 }
->>>>>>> 7830590e0d3fed317aca69a80ecc615ce2e587b1
+
 .calendar__item {
     width: 25px;
     height: 25px;
 }
-
-
-.event__content {
-    padding: 10px 0;
-    display: grid;
-    gap: 10px;
-}
-.event__title_small {
-    font-size: 20px;
-}
-
 
 @media screen and (min-width:685px){
     .event__inner{
@@ -1145,7 +1133,6 @@
         height: 50%;
     }
 }
-
 /* __________departments.html__________departments.html__________departments.html__________departments.html__________ */
 .dep-intro {
     padding: 250px 0 50px;
