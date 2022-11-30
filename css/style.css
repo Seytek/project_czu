@@ -1089,6 +1089,8 @@
     display: grid;
     gap: 10px;
 }
+<<<<<<< HEAD
+=======
 .calendar__title,
 .event__date_small,
 .event__permission {
@@ -1103,6 +1105,7 @@
 .calendar__items {
     margin-top: 5px;
 }
+>>>>>>> 7830590e0d3fed317aca69a80ecc615ce2e587b1
 .calendar__item {
     width: 25px;
     height: 25px;
@@ -1254,14 +1257,483 @@
 
 }
 
-
 /* __________education.html__________education.html__________education.html__________education.html__________ */
+/* ____________________________________________ Section title education */
+.section__info__education {
+    gap: 5px;
+    display: flex;
+}
+.section__items__education {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 2px dashed #0040ff;
+    padding-right: 25px;
+    padding-left: 15px;
+}
+li {
+    margin: 10px 0px;
+}
+.section__info__opportunities__education {
+    gap: 5px;
+    display: flex;
+}
+.section__title__education {
+    font-size: 30px;
+    width: 70%;
+    padding-left: 10px;
+    padding-top: 12px;
+}
+.section__title__1__education {
+    font-size: 30px;
+    border-top: 3px solid #0040ff;
+    padding: 35px 0 50px;
+    margin-top: -1px;
+    text-align: center;
+}
+.section__title__about__education {
+    width: 70%;
+}
+.underline__education {
+    border-bottom: 2px solid var(--black);
+}
+.section__subtitle__education {
+    font-size: 20px;
+}
+@media (max-width: 780px) {
+    .section__title__education {
+        font-size: 14px;
+        right: 5px;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .section__subtitle__education {
+        font-size: 20px;
+    }
+    li {
+        font-size: 13px;
+    }
+    ul {
+        padding-right: 5px;
+    }
+}
 
+
+/* ____________________________________________ Education */
+.education {
+    margin: 150px 0 50px;
+}
+.education__inner {
+    margin: 20px 5px;
+}
+.education__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.education__text {
+    line-height: 1.8;
+}
+.education__img {
+    border-radius: 5px;
+}
+#education__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.education__img__1 {
+    position: relative;
+    top: 25px;
+}
+@media (max-width: 780px) {
+    .education__images {
+        width: fit-content;
+        position: relative;
+        top: 15px;
+    }
+    .education {
+        position: relative;
+        top: -55px;
+    }
+    .education__text {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
+@media (min-width: 1025px) {
+    .education__img__1 {
+        position: relative;
+        top: 13px;
+        width: 649px;
+        left: 445px;
+    }
+}
+/* ____________________________________________ Opportunities education */
+.opportunities__education {
+    border-top: 1px solid var(--footerwhite);
+    margin-top: 60px;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+.opportunities__inner__education {
+    display: grid;
+    gap: 50px;
+}
+.opportunities__subtitle__education {
+    font-weight: 700;
+    margin: 15px 0;
+    border-right: 2px solid #0040ff;
+    width: 125px;
+}
+.opportunities__item__education {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    border: 0.1px solid rgb(228, 228, 228);
+    box-shadow: 5px 5px #0040ff;
+    text-align: center;
+}
+.opportunities__title__education {
+    padding-right: 15px;
+    width: 83.33333%;
+    line-height: 1.6;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media (max-width: 780px) {
+    .opportunities__title__education {
+        font-size: 10px;
+    }
+    .opportunities__inner__education {
+        width: 500px;
+        position: relative;
+        left: -10px;
+    }
+    .opportunities__item__education {
+        width: 350px;
+    }
+    .opportunities__title__education {
+        font-size: 11px;
+    }
+}
+@media (min-width: 1025px) {
+    .opportunities__inner__education {
+        padding-right: 315px;
+        margin-left: -50px;
+    }   
+}
+.gallery__education {
+    padding: 20px 5px;
+    position: relative;
+    z-index: 1;
+    background-color: RGBA(0,0,0,1);
+    background-color: RGBA(var(--secondary-bg),1);
+    color: RGBA(255,255,255,1);
+    color: RGBA(var(--secondary-text),1);
+    margin-top: 60px;
+    margin-bottom: -60px;
+}
+.tle-container {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1380px;
+}
+.gallery-content {
+    overflow: visible;
+}
+.gallery-title {
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 23.994px;
+    padding: 0 10px;
+}
+.gallery-images {
+    counter-reset: b;
+    background-color: black;
+}
+.gallery-image {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+}
+.gallery-image__crop__1 {
+    width: 100%;
+    overflow: hidden;
+    border-top: 3px solid #0040ff;
+    padding-top: 20px;
+}
+.gallery-image__crop {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.gallery-image__caption {
+    font-size: 16.0002px;
+    font-weight: 400;
+    line-height: 1.3;
+    background-color: RGBA(0,0,0,1);
+    background-color: RGBA(var(--secondary-bg),1);
+    margin-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+}
+.gallery-image__media {
+    display: block;
+    -webkit-transition: all .3s cubic-bezier(.215,.61,.355,1);
+    -o-transition: all .3s cubic-bezier(.215,.61,.355,1);
+    transition: all .3s cubic-bezier(.215,.61,.355,1);
+    width: 100%;
+}
+@media (min-width: 1025px) {
+    .gallery-image {
+        width: 600px;
+        left: 400px;
+    }
+    .gallery-images {
+        max-width: 100%;
+        width: 2500px;
+    }
+}
 
 
 /* __________faculties.html__________faculties.html__________faculties.html__________faculties.html__________ */
+/* ____________________________________________ Section title faculties */
+.section__info__facul {
+    display: grid;
+    gap: 5px;
+    padding-top: 100px;
+    padding-left: 25px;
+}
+.section__title__facul {
+    font-size: 30px;
+    font-style: italic;
+    position: relative;
+    left: -25px;
+}
+.section__title__about__facul {
+    width: 70%;
+}
+.underline__facul {
+    border-bottom: 2px solid var(--black);
+}
+.section__subtitle__facul {
+    font-size: 20px;
+    padding-top: 25px;
+    padding-right: 250px;
+}
+.h4__facul {
+    font-size: 23px;
+}
+@media (max-width: 780px) {
+    .section__title__facul {
+        font-size: 20px;
+        position: relative;
+        left: -25px;
+        top: -35px;
+    }
+    .section__subtitle__facul {
+        font-size: 17px;
+        width: 500px;
+        position: relative;
+        left: -15px;
+        line-height: 25px;
+        top: -20px;
+    }
+    body .facul__items__facul {
+        position: relative;
+        top: -35px;
+        display: block;
+    }
+    body .facul__list_subtitle__facul {
+        position: relative;
+        line-height: 20px;
+        margin-left: -175px;
+        text-align: left;
+    }
+    body .facul__img__facul {
+        width: 150px;
+    }
+    body .facul__list__inner__facul {
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    body .facul__item__facul {
+        flex: 50%;
+        padding: 0 4px;
+    }
+}
 
+/* ____________________________________________ Faculties */
+.facul {
+    border-top: 1px solid var(--footerwhite);
+    margin-top: 60px;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
 
+/* ____________________________________________ Faculties line */
+.facul__line {
+    border-top: 1px solid var(--footerwhite);
+    padding-bottom: 1px;
+}
+.section__line {
+    font-size: 20px;
+    border-top: 3px solid #EC8C19;
+    padding: 35px 0 7px;
+    margin-top: -1px;
+    display: flex;
+}
+.facul__line__outro {
+    position: relative;
+    bottom: -3px;
+}
+.facul__line__outro__1 {
+    position: relative;
+    top: -40px;
+}
+.section__line__outro {
+    font-size: 20px;
+    border-top: 5px solid #EC8C19;
+    padding: 35px 0 7px;
+    margin-top: -1px;
+    display: flex;
+}
+.facul__line {
+    font-weight: 700;
+    margin: 15px 0;
+}
 
+/* ____________________________________________ Faculties info */
+.facul__list__inner {
+    margin: 50px auto;
+}
+.facul__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+}
+.facul__img {
+    box-shadow: 5px 5px #EC8C19;
+    margin-bottom: 12px;
+    width: 200%;
+}
+.facul__item {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.facul__list__subtitle {
+    font-size: 17px;
+}
+.btn__facul {
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 450px;
+    margin-top: 25px;
+    color: var(--color-white);
+    width: 100%;
 
+    transition: all .5s linear;
+}
+.btn__facul:hover {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+@media (max-width: 780px) {
+    body .facul__items {
+        position: relative;
+        top: -35px;
+        display: flex;
+        gap: 0px;
+    }
+    body .facul__list__subtitle {
+        position: relative;
+        line-height: 20px;
+        text-align: left;
+    }
+    body .facul__img {
+        width: 150px;
+    }
+    body .facul__img__hidden {
+        display: none;
+    }
+    body .facul__list__inner {
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    body .facul__item {
+        flex: 50%;
+        padding: 0 4px;
+    }
+    .btn__facul {
+        width: calc(100%/2);
+        position: relative;
+        left: -300px;
+    }
+}
+@media (min-width: 481px) {
+    .btn__facul {
+        width: 50%;
+    }
+}
+@media (min-width: 1025px) {
+    .btn__facul {
+        width: 25%;
+    }
+}
 
+/* ____________________________________________ Outro */
+.outro {
+    padding: 120px 0 50px;
+    border-bottom: 1px solid var(--footer-white);
+    background: url(https://www.mit.edu/files/images/201806/Maseeh_0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--footer-white);
+    top: -40px;
+}
+.outro__overlay {
+    position: absolute;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    top: 0;
+    left: 0;
+}
+.outro__inner {
+    position: relative;
+    z-index: 999;
+    display: grid;
+    gap: 20px;
+}
+.outro__title {
+    font-size: 25px;
+}
+.outro__text {
+    font-size: 15px;
+}
+
+/* ____________________________________________ Footer faculties */
+.footer__facul {
+    background-color: var(--color-darkblue);
+    color: var(--footer-white);
+    padding: 25px 0;
+    margin-top: -82px;
+}   
