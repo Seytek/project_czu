@@ -1133,7 +1133,7 @@
         height: 50%;
     }
 }
-/* __________departments.html__________departments.html__________departments.html__________departments.html__________ */
+/* __________departments.html__________contacts.html__________departments.html__________contacts.html__________ */
 .dep-intro {
     padding: 250px 0 50px;
     background: url(../images/departments/hero.jpg);
@@ -1195,6 +1195,10 @@
         background-color: #001941;
         color: #E4E4E4;
     }
+    .contacts__items{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -1241,7 +1245,23 @@
     .undecided h2{
         font-size: 1.5rem;
     }
-
+    .contacts__items{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+hr {
+    margin-top: 10px;
+}
+.contacts__item{
+    padding: 10px 0 5px;
+}
+.contacts__item h3{
+    font-size: 1.5rem;
+}
+.contacts-name{
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* __________education.html__________education.html__________education.html__________education.html__________ */

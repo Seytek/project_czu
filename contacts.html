@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Magnum University of Technology</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo" href="index.html">MUT</a>
+                <div class="header__nav">
+                    <input type="checkbox" id="nav-toggle"> <!-- use id because of label -->
+                    <nav class="nav">
+                        <ul class="nav__items">
+                            <li><a href="education.html" class="nav__item">Education</a></li>
+                            <li><a href="faculties.html" class="nav__item">Faculties</a></li>
+                            <li><a href="campus.html" class="nav__item">Campus</a></li>
+                            <li><a href="news.html" class="nav__item">News</a></li>
+                            <li><a href="about.html" class="nav__item">About</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-btn">
+                        <input type="checkbox" id="search-btn__toggle">
+                        <label for="search-btn__toggle" class="search-btn__label">
+                            <img class="search-btn__img" src="images/search2.svg" alt="#"></label>
+                        <div class="search-block">
+                            <input placeholder="What are you looking for" type="text" class="search-block__field">
+                            <a href="#" class="search-block__btn">Find it</a>
+                        </div>
+                    </div>
+                    <label for="nav-toggle" class="nav-toggle__label"><span class="nav__burger"></span></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-intro"> <!--reusing news-intro to not make any more mess in the style.css-->
+        <div class="container">  <!--I might have to change the name of things later tho-->
+            <div class="news-intro__inner">
+                <h1 class="news-intro__title">Contacts</h1>
+                <h2 class="news-intro__text">Get in touch with us!</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts-page">
+        <div class="container">
+            <hr>
+            <div class="contacts__items">
+                <div class="contacts__item">
+                    <h3>Study consultation</h3>
+                    <p>General purpose adress:<br>
+                        genreal@consultation.mut.com</p>
+                    <div class="contacts-name">Jane Doe</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ doe@consultation.mut.com
+                    </p>
+                    <div class="contacts-name">Al Coholic</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ coholic@consultation.mut.com
+                    </p>
+                </div>
+                <div class="contacts__item">
+                    <h3>Helpdesk</h3>
+                    <p>General purpose adress:<br>
+                        genreal@helpdesk.mut.com</p>
+                    <div class="contacts-name">Ho Lee Fuk</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ fuk@helpdesk.mut.com
+                    </p>
+                    <div class="contacts-name">Frank N. Stein</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ stein@helpdesk.mut.com
+                    </p>
+                </div>              
+                <div class="contacts__item">
+                    <h3>Press Spokesman</h3>
+                    <div class="contacts-name">Dill Doe</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ doe@pr.mut.com
+                    </p>
+                </div>
+                <div class="contacts__item">
+                    <h3>Rector's secretary</h3>
+                    <div class="contacts-name">Miles A. Head</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ head@rectorate.mut.com
+                    </p>
+                </div>
+                <div class="contacts__item">
+                    <h3>Chancellor's office</h3>
+                    <div class="contacts-name">Kay Oss</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ oss@chancelling.mut.com
+                    </p>
+                    <div class="contacts-name">Hugh Jass</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ jass@chancelling.mut.com
+                    </p>
+                </div>
+                <div class="contacts__item">
+                    <h3>Head of marketing</h3>
+                    <div class="contacts-name">Dick Tate</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ tate@marketing.mut.com
+                    </p>
+                </div>
+                <div class="contacts__item">
+                    <h3>Head of security</h3>
+                    <div class="contacts-name">Robin banks</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ banks@security.mut.com
+                    </p>
+                </div>
+                <div class="contacts__item">
+                    <h3>Nure's office</h3>
+                    <div class="contacts-name">Lori Driver</div>
+                    <p>📱 + 123 123 123 123 <br>
+                        ✉️ driver@nurse.mut.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__block">
+                    <div>Lorem-ipsum 1844/12</div>
+                    <div>Paris 150 00, France, MU, LOREM</div>
+                    <div class="social">
+                        <img class="social__item" src="images/facebook.svg" alt="#">
+                        <img class="social__item" src="images/instagram.svg" alt="#">
+                        <img class="social__item" src="images/twitter.svg" alt="#">
+                        <img class="social__item" src="images/youtube.svg" alt="#">
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footer__link">Join us right now!</a> <!-- Well played -->
+                </div>
+                <div class="made-by">Made by Lorem Ipsum</div> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
