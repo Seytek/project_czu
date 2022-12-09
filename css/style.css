@@ -15,6 +15,7 @@
     --fontsize-22: 22px;
     --fontsize-18: 18px;
     --fontsize-14: 14px;
+    --fontsize-13: 13px;
 }
 
 /* ____________________________________________ Container */
@@ -109,7 +110,7 @@
 .search-block {
     display: none;
     position: absolute;
-    top: 100%; /* it will be after our .header block */
+    top: 100%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -200,7 +201,7 @@
 #nav-toggle:checked ~ .nav {
     display: block;
 }
-#nav-toggle:checked ~ .nav-toggle__label .nav__burger { /*we are hiding the main line of burger */
+#nav-toggle:checked ~ .nav-toggle__label .nav__burger { 
     background: transparent;
 }
 #nav-toggle:checked ~ .nav-toggle__label .nav__burger::before {
@@ -212,7 +213,7 @@
     top: 0;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
     .nav-toggle__label {
         display: none;
     }
@@ -226,6 +227,14 @@
     .nav__items {
         display: flex;
         margin: auto 0;
+    }
+    .nav__item {
+        font-size: var(--fontsize-13);
+    }
+}
+@media (min-width: 1025px) {
+    .nav__item {
+        font-size: var(--fontsize-16);
     }
 }
 
@@ -286,7 +295,6 @@
     width: 25px;
     height: 25px;
 }
-
 @media (min-width: 769px) {
     .footer__inner {
         grid-template-columns: 1fr 1fr;
@@ -295,9 +303,6 @@
         text-align: right;
     }
 }
-
-/* __________________________________________everything above works for other pages _________________________________________ */
-
 
 /* ____________________________________________ Introduction */
 .intro {
@@ -387,7 +392,6 @@
     height: 100%;
     padding: 10px;
     border: 1px solid var(--color-orange);
-    /* box-shadow: 5px 5px #0FFF95; */
 }
 .news__items {
     width: 100%;
@@ -499,21 +503,28 @@
 
 /* ____________________________________________ Stats */
 .stats {
-    padding: 25px 0;
-    border-bottom: 1px solid var(--footer-white);
-    position: relative;
-    overflow: hidden;
-    background-color: var(--color-darkblue-rgb);
     color: var(--footer-white);
+    background-image: url(../images/students/students5.jpg);
+    position: relative;
+    top: 0;
+    padding: 25px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
 }
-.stats__background {
+.stats__overlay {
     position: absolute;
     top: 0;
     left: 0;
+    background-color: var(--color-darkblue-rgb);
+    width: 100%;
+    height: 100%;
     z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
 }
 .stats__inner {
     margin-top: 30px;
@@ -655,7 +666,7 @@
     margin: 20px 0;
     text-align: left;
 }
-.news__event_ul{ /* changed to a random name of the class, because it may break other 'ul' in the future */
+.news__event_ul{
     margin: 10px 0;
 }
 
@@ -719,8 +730,6 @@
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-
 /*___________________________________________ Switch*/
 .tabs {
     display: flex;
@@ -742,7 +751,7 @@
     order: 1;
     display: none;
 }
-.switch:checked + label + .tab__item { /* it means that after .switch must come immidiately label and than .tab__item */
+.switch:checked + label + .tab__item {
     display: block;
 }
 .switch:checked + label { 
@@ -1069,74 +1078,7 @@
     }
   }
   
-/* __________event.html__________event.html__________event.html__________event.html__________ */
-.event {
-    padding: 100px 0 50px; /*changed top padding from 82px to 100px, it was blanding with the header on mobile*/
-}
-.event__img {
-    max-width: 100%;
-    object-fit: cover;
-    /*margin-left: -15px;
-    margin-bottom: 15px;*/
-}
-.event__header {
-    background-color: var(--color-darkblue);
-    width: 100%;
-    /*margin-left: -15px;*/
-    color: var(--footer-white);
-    padding: 15px;
-    display: grid;
-    gap: 10px;
-}
-.event__info {
-    display: grid;
-    gap: 10px;
-    padding-bottom: 10px;
-}
 
-.calendar__title,
-.event__date_small,
-.event__permission {
-    font-weight: 700;
-}
-.event__date_small {
-    margin-top: 10px;
-}
-.event__permission span {
-    font-weight: 400;
-}
-.calendar__items {
-    margin-top: 5px;
-}
-
-.calendar__item {
-    width: 25px;
-    height: 25px;
-}
-
-@media screen and (min-width:685px){
-    .event__inner{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-auto-rows: minmax(min-content, max-content);
-        align-self: top;
-        border: 1px solid;
-    }
-    .event__header{
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-    .event__img{
-        grid-column: 1;
-        grid-row: 1/6;
-    }
-    .event__date_small, .event__time, .event__permission, .calendar__block, .event__content {
-        grid-column: 2;
-    }
-    .event__content {
-        height: 50%;
-    }
-}
 /* __________departments.html__________contacts.html__________departments.html__________contacts.html__________ */
 .dep-intro {
     padding: 250px 0 50px;
@@ -1157,23 +1099,19 @@
 .department-heading{
     font-size: 2rem;
 }
-
 .department__item{
     margin: 15px 0px 15px 0px;
 }
-
 .contact{
     background-color: #fa5f1c;
     color: #E4E4E4;
     padding: 10px 20px 10px 20px;
     margin: 0 -20px 0 -20px;
 }
-
 .undecided{
     padding: 10px 20px 10px 20px;
     margin: 0 -20px 0 -20px;
 }
-
 .contacts__item{
     padding: 10px 0 5px;
 }
@@ -1184,7 +1122,6 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-
 @media screen and (min-width: 685px){
     .department__items{
         display: grid;
@@ -1220,7 +1157,6 @@
         padding-bottom: 2rem;
     }
 }
-
 @media screen and (min-width: 1025px) {
     .dep-intro{
         padding: 250px 0 25px;
@@ -1273,6 +1209,9 @@
         padding: 10px 0 15px 0;
     }
 }
+
+
+
 /* __________education.html__________education.html__________education.html__________education.html__________ */
 /* ____________________________________________ Section title education */
 .section__info__education {
@@ -1555,279 +1494,9 @@
 }
 
 
-/* __________faculties.html__________faculties.html__________faculties.html__________faculties.html__________ */
-/* ____________________________________________ Section title faculties */
-.section__info__facul {
-    display: grid;
-    gap: 5px;
-    padding-top: 100px;
-    padding-left: 25px;
-}
-.section__title__facul {
-    font-size: 30px;
-    font-style: italic;
-    position: relative;
-    left: -25px;
-}
-.section__title__about__facul {
-    width: 70%;
-}
-.underline__facul {
-    border-bottom: 2px solid var(--black);
-}
-.section__subtitle__facul {
-    font-size: 20px;
-    padding-top: 25px;
-    padding-right: 250px;
-}
-.h4__facul {
-    font-size: 23px;
-}
-@media (max-width: 780px) {
-    .section__title__facul {
-        font-size: 20px;
-        position: relative;
-        left: -25px;
-        top: -35px;
-    }
-    .section__subtitle__facul {
-        font-size: 17px;
-        width: 500px;
-        position: relative;
-        left: -15px;
-        line-height: 25px;
-        top: -20px;
-    }
-    body .facul__items__facul {
-        position: relative;
-        top: -35px;
-        display: block;
-    }
-    body .facul__list_subtitle__facul {
-        position: relative;
-        line-height: 20px;
-        margin-left: -175px;
-        text-align: left;
-    }
-    body .facul__img__facul {
-        width: 150px;
-    }
-    body .facul__list__inner__facul {
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
-    body .facul__item__facul {
-        flex: 50%;
-        padding: 0 4px;
-    }
-}
-
-/* ____________________________________________ Faculties */
-.facul {
-    border-top: 1px solid var(--footerwhite);
-    margin-top: 60px;
-    padding-bottom: 15px;
-    overflow: hidden;
-}
-
-/* ____________________________________________ Faculties line */
-.facul__line {
-    border-top: 1px solid var(--footerwhite);
-    padding-bottom: 1px;
-}
-.section__line {
-    font-size: 20px;
-    border-top: 3px solid #EC8C19;
-    padding: 35px 0 7px;
-    margin-top: -1px;
-    display: flex;
-}
-.facul__line__outro {
-    position: relative;
-    bottom: -3px;
-}
-.facul__line__outro__1 {
-    position: relative;
-    top: -40px;
-}
-.section__line__outro {
-    font-size: 20px;
-    border-top: 5px solid #EC8C19;
-    padding: 35px 0 7px;
-    margin-top: -1px;
-    display: flex;
-}
-.facul__line {
-    font-weight: 700;
-    margin: 15px 0;
-}
-
-/* ____________________________________________ Faculties info */
-.facul__list__inner {
-    margin: 50px auto;
-}
-.facul__items {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 100px;
-}
-.facul__img {
-    box-shadow: 5px 5px #EC8C19;
-    margin-bottom: 12px;
-    width: 200%;
-}
-.facul__item {
-    padding-left: 25px;
-    padding-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
-}
-.facul__list__subtitle {
-    font-size: 17px;
-}
-.btn__facul {
-    background-color: var(--color-orange);
-    border: 1px solid var(--color-orange);
-    padding: 15px 10px;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 10px;
-    text-align: center;
-    margin-left: 450px;
-    margin-top: 25px;
-    color: var(--color-white);
-    width: 100%;
-
-    transition: all .5s linear;
-}
-.btn__facul:hover {
-    background-color: var(--white);
-    border: 1px solid var(--black);
-    color: var(--black);
-}
-@media (max-width: 780px) {
-    body .facul__items {
-        position: relative;
-        top: -35px;
-        display: flex;
-        gap: 0px;
-    }
-    body .facul__list__subtitle {
-        position: relative;
-        line-height: 20px;
-        text-align: left;
-    }
-    body .facul__img {
-        width: 150px;
-    }
-    body .facul__img__hidden {
-        display: none;
-    }
-    body .facul__list__inner {
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
-    body .facul__item {
-        flex: 50%;
-        padding: 0 4px;
-    }
-    .btn__facul {
-        width: calc(100%/2);
-        position: relative;
-        left: -300px;
-    }
-}
-@media (min-width: 481px) {
-    .btn__facul {
-        width: 50%;
-    }
-}
-@media (min-width: 1025px) {
-    .btn__facul {
-        width: 25%;
-    }
-}
-
-/* ____________________________________________ Outro */
-.outro {
-    padding: 120px 0 50px;
-    border-bottom: 1px solid var(--footer-white);
-    background: url(https://www.mit.edu/files/images/201806/Maseeh_0.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: var(--footer-white);
-    top: -40px;
-}
-.outro:hover {
-    opacity: 100%;
-    transition: all 0.4s linear;
-}
-.outro__overlay {
-    position: absolute;
-    opacity: .5;
-    height: 100%;
-    width: 100%;
-    background-color: var(--black);
-    top: 0;
-    left: 0;
-}
-.outro__inner {
-    position: relative;
-    z-index: 999;
-    display: grid;
-    gap: 20px;
-    top: -25px;
-}
-.outro__title {
-    font-size: 30px;
-}
-.outro__text {
-    font-size: 25px;
-    font-style: oblique;
-}
-@media (min-width: 1025px) {
-    .outro {
-    padding: 250px 0 50px;
-    opacity: 50%;
-    transition: all 0.4s linear;
-    }
-    .outro__inner {
-    top: -125px
-    }
-}
-@media (max-width: 780px) {
-    .outro__title {
-        font-size: 25px;
-    }
-    .outro__text {
-        font-size: 20px;
-    }
-}
-/* ____________________________________________ Footer faculties */
-.footer__facul {
-    background-color: var(--color-darkblue);
-    color: var(--footer-white);
-    padding: 25px 0;
-    margin-top: -82px;
-}   
-
-
-
 
 
 /* search.html search.html search.html search.html search.html search.html search.html search.html search.html search.html  */
-
-
 .search {
     margin-top: 81px;
     padding: 25px 0;
@@ -1839,8 +1508,6 @@
 .search__title {
     color: white;
 }
-
-
 /* ____________________________________________ Search tabs*/
 .search-tabs {
     display: flex;
@@ -1864,7 +1531,6 @@
 .search__tab {
     margin-bottom: 25px;
 }
-
 /* ____________________________________________ Search block*/
 .search__inner {
     display: flex;
@@ -1899,8 +1565,6 @@
 .search__img {
     width: 22px;
 }
-
-
 /* ____________________________________________ Search info (content of block) */
 .searched__info {
     display: grid;
@@ -1914,4 +1578,67 @@
 }
 .searched__site {
     color: gray;
+}
+
+
+/* admissions.html admissions.html admissions.html admissions.html admissions.html admissions.html admissions.html */
+
+.admissions-switch {
+    padding: 25px 0;
+}
+.switch-admissions {
+    width: 50%;
+}
+
+.admissions__tab {
+    display: grid;
+    gap: 10px;
+    background-color: var(--footer-white);
+    padding: 15px;
+}
+.admissions__links {
+    display: grid;
+    gap: 10px;
+}
+.admissions__title {
+    font-size: var(--fontsize-26);
+    font-weight: 700;
+
+    transition: all linear 0.2s;
+}
+.admissions__link span {
+    color: var(--color-orange);
+    font-size: var(--fontsize-18);
+    font-weight: 700;
+}
+.admissions__link {
+    font-weight: 700;
+}
+.admissions__link:hover {
+    color: var(--color-orange);
+}
+@media (min-width: 800px) {
+    .admissions__tab {
+        grid-template-columns: 1fr 25%;
+        padding: 40px;
+    }
+    .admissions__title {
+        grid-column: 2 span;
+    }
+}
+
+
+.admissions-intro {
+    margin-top: 64px;
+    padding: 55px 0 25px;
+    text-align: center;
+}
+.admissions-intro__title {
+    font-size: var(--fontsize-22);
+    font-weight: 700;
+}
+@media (min-width: 600px) {
+    .admissions-intro__title {
+        font-size: var(--fontsize-40);
+    }
 }
