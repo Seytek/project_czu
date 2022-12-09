@@ -1170,6 +1170,17 @@
     margin: 0 -20px 0 -20px;
 }
 
+.contacts__item{
+    padding: 10px 0 5px;
+}
+.contacts__item h3{
+    font-size: 1.5rem;
+}
+.contacts-name{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 @media screen and (min-width: 685px){
     .department__items{
         display: grid;
@@ -1202,6 +1213,7 @@
     .contacts__items{
         display: grid;
         grid-template-columns: repeat(2, auto);
+        padding-bottom: 2rem;
     }
 }
 
@@ -1253,21 +1265,10 @@
         display: grid;
         grid-template-columns: auto auto auto;
     }
+    .contacts__item{
+        padding: 10px 0 15px 0;
+    }
 }
-hr {
-    margin-top: 10px;
-}
-.contacts__item{
-    padding: 10px 0 5px;
-}
-.contacts__item h3{
-    font-size: 1.5rem;
-}
-.contacts-name{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
 /* __________education.html__________education.html__________education.html__________education.html__________ */
 /* ____________________________________________ Section title education */
 .section__info__education {
