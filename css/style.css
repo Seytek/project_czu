@@ -1146,7 +1146,11 @@
     
     color: var(--footer-white);
 }
-
+.contact__img {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+}
 .departments{
     padding-top: 25px;
 }
@@ -1276,12 +1280,14 @@ hr {
 }
 .section__items__education {
     padding-top: 5px;
-    padding-bottom: 5px;
     border-right: 2px dashed #0040ff;
     padding-right: 25px;
     padding-left: 15px;
 }
 .li {
+    margin: 10px 0px;
+}
+.edu__item {
     margin: 10px 0px;
 }
 .section__info__opportunities__education {
@@ -1296,7 +1302,7 @@ hr {
 }
 .section__title__1__education {
     font-size: 30px;
-    border-top: 3px solid #0040ff;
+    border-top: 4px solid #0040ff;
     padding: 35px 0 50px;
     margin-top: -1px;
     text-align: center;
@@ -1312,7 +1318,7 @@ hr {
 }
 @media (max-width: 780px) {
     .section__title__education {
-        font-size: 14px;
+        font-size: 17px;
         right: 5px;
         position: relative;
         margin-bottom: 15px;
@@ -1341,8 +1347,8 @@ hr {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
-.education__text {
-    line-height: 1.8;
+.education__text__edu {
+    line-height: 1.4;
 }
 .education__img {
     border-radius: 5px;
@@ -1351,10 +1357,16 @@ hr {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 4px solid #0040ff;
 }
 .education__img__1 {
     position: relative;
     top: 25px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 }
 @media (max-width: 780px) {
     .education__images {
@@ -1375,13 +1387,13 @@ hr {
     .education__img__1 {
         position: relative;
         top: 13px;
-        width: 649px;
-        left: 445px;
+        width: 600px;
+        left: 525px;
     }
 }
 /* ____________________________________________ Opportunities education */
 .opportunities__education {
-    border-top: 1px solid var(--footerwhite);
+    border-top: 1px solid RGBA(0,0,0,.3);
     margin-top: 60px;
     padding-bottom: 60px;
     overflow: hidden;
@@ -1413,9 +1425,6 @@ hr {
     padding-bottom: 10px;
 }
 @media (max-width: 780px) {
-    .opportunities__title__education {
-        font-size: 10px;
-    }
     .opportunities__inner__education {
         width: 500px;
         position: relative;
@@ -1425,14 +1434,17 @@ hr {
         width: 350px;
     }
     .opportunities__title__education {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 @media (min-width: 1025px) {
     .opportunities__inner__education {
-        padding-right: 315px;
+        padding-right: 100px;
         margin-left: -50px;
     }   
+}
+.gallery {
+    background-color: black;
 }
 .gallery__education {
     padding: 20px 5px;
@@ -1462,7 +1474,6 @@ hr {
 }
 .gallery-images {
     counter-reset: b;
-    background-color: black;
 }
 .gallery-image {
     padding-left: 30px;
@@ -1474,13 +1485,22 @@ hr {
 .gallery-image__crop__1 {
     width: 100%;
     overflow: hidden;
-    border-top: 3px solid #0040ff;
     padding-top: 20px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 }
 .gallery-image__crop {
     width: 100%;
     overflow: hidden;
     padding-top: 20px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 }
 .gallery-image__caption {
     font-size: 16.0002px;
@@ -1489,8 +1509,8 @@ hr {
     background-color: RGBA(0,0,0,1);
     background-color: RGBA(var(--secondary-bg),1);
     margin-top: 10px;
-    padding-bottom: 20px;
-    color: white;
+    padding-bottom: 15px;
+    color: white;    
 }
 .gallery-image__media {
     display: block;
@@ -1502,12 +1522,35 @@ hr {
 @media (min-width: 1025px) {
     .gallery-image {
         width: 600px;
-        left: 400px;
+        left: 380px;
     }
     .gallery-images {
         max-width: 100%;
         width: 2500px;
+        display: flex;
+        position: relative;
+        left: -380px;
     }
+}
+@media (max-width: 780px) {
+    .gallery-image__crop__1 {
+        border-top: 5px solid #0040ff;
+    }
+    .gallery-image__caption {
+        border-bottom: 2px solid rgb(0, 64, 255);
+    }
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-o-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-ms-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 
@@ -1640,6 +1683,11 @@ hr {
     flex-direction: column;
     gap: 8px;
     width: 100%;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 }
 .facul__list__subtitle {
     font-size: 17px;
@@ -1719,6 +1767,10 @@ hr {
     color: var(--footer-white);
     top: -40px;
 }
+.outro:hover {
+    opacity: 100%;
+    transition: all 0.4s linear;
+}
 .outro__overlay {
     position: absolute;
     opacity: .5;
@@ -1733,14 +1785,33 @@ hr {
     z-index: 999;
     display: grid;
     gap: 20px;
+    top: -25px;
 }
 .outro__title {
-    font-size: 25px;
+    font-size: 30px;
 }
 .outro__text {
-    font-size: 15px;
+    font-size: 25px;
+    font-style: oblique;
 }
-
+@media (min-width: 1025px) {
+    .outro {
+    padding: 250px 0 50px;
+    opacity: 50%;
+    transition: all 0.4s linear;
+    }
+    .outro__inner {
+    top: -125px
+    }
+}
+@media (max-width: 780px) {
+    .outro__title {
+        font-size: 25px;
+    }
+    .outro__text {
+        font-size: 20px;
+    }
+}
 /* ____________________________________________ Footer faculties */
 .footer__facul {
     background-color: var(--color-darkblue);
@@ -1748,6 +1819,8 @@ hr {
     padding: 25px 0;
     margin-top: -82px;
 }   
+
+
 
 
 
